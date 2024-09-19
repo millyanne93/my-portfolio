@@ -10,7 +10,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
-      <div className="bg-gray-50 dark:bg-gray-900 min-h-screen flex flex-col">
+      <div className="bg-custom-bg bg-cover bg-center min-h-screen flex flex-col">
         <Navbar />
         
         {/* Page content */}

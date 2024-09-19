@@ -4,7 +4,7 @@ const Contact = () => {
       return (
               <section className="min-h-screen flex items-center justify-center">
                 <form className="w-full max-w-lg bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
-                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Contact Me</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">I'm currently open to new opportunities. Fill out the form below, and I'll get back to you soon!</h2>
                   <input className="w-full p-2 mb-4 border dark:border-gray-600 rounded" type="text" placeholder="Your Name" required />
                   <input className="w-full p-2 mb-4 border dark:border-gray-600 rounded" type="email" placeholder="Your Email" required />
                   <textarea className="w-full p-2 mb-4 border dark:border-gray-600 rounded" placeholder="Your Message" required></textarea>
