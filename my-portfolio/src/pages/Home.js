@@ -24,17 +24,19 @@ const Home = () => {
           </a>
         </div>
 
-        {/* Photo on the Right */}
+        {/* Photo on the Right with Blended Background */}
         <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center">
-          <img
-            src={profilePhoto}
-            alt="Profile Photo"
-            className="rounded-lg w-64 h-64 object-cover shadow-lg"
-          />
+          <div className="relative rounded-full bg-gradient-to-br from-white/40 via-transparent to-gray-900/40 p-2 shadow-2xl">
+            <img
+              src={profilePhoto}
+              alt="Profile Photo"
+              className="rounded-full w-64 h-64 object-cover opacity-90 mix-blend-overlay shadow-lg"
+            />
+          </div>
         </div>
       </div>
 
-      {/* Services Section - Aligned Left with Bullet Points and Symbols */}
+      {/* Services Section - Aligned Left with Bullet Points and Descriptions */}
       <section className="py-12 w-full">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-start">
           {/* Left side with Title */}
