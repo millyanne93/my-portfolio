@@ -9,17 +9,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white dark:bg-gray-800 p-4 shadow-md">
+    <nav className="bg-teal-500 dark:bg-teal-700 p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <div>
-          <a href="/" className="text-xl font-semibold text-gray-900 dark:text-white">Millyanne Wanjala</a>
+          <a href="/" className="text-xl font-semibold text-white dark:text-gray-200">Personal Portfolio</a>
         </div>
         <div className="flex space-x-4">
-          <a href="/" className="text-gray-700 dark:text-gray-300">Home</a>
-          <a href="/about" className="text-gray-700 dark:text-gray-300">About</a>
-          <a href="/projects" className="text-gray-700 dark:text-gray-300">Projects</a>
-          <a href="/contact" className="text-gray-700 dark:text-gray-300">Contact</a>
-          <button onClick={toggleDarkMode} className="ml-4">
+          <a href="/" className="text-white dark:text-gray-300">Home</a>
+          <a href="/about" className="text-white dark:text-gray-300">About</a>
+          <a href="/projects" className="text-white dark:text-gray-300">Projects</a>
+          <a href="/contact" className="text-white dark:text-gray-300">Contact</a>
+          <button onClick={toggleDarkMode} className="ml-4 text-white dark:text-gray-300">
             {isDarkMode ? 'Light Mode' : 'Dark Mode'}
           </button>
         </div>
