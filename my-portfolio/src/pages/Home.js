@@ -9,7 +9,7 @@ const Home = () => {
 
         {/* Text Content on the Left */}
         <div className="md:w-1/2 text-left">
-          <h1 className="text-5xl font-bold text-gray-900 dark:text-white transition-all duration-500 ease-in-out transform hover:scale-110">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white transition-all duration-500 ease-in-out transform hover:scale-110">
             Hi there, I'm Millyanne Wanjala
           </h1>
           <p className="mt-4 text-black-700 dark:text-gray-300">

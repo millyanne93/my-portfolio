@@ -1,26 +1,23 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { animated, useSpring } from 'react-spring'; 
+import { animated, useSpring } from 'react-spring';
 import { FaUser, FaGraduationCap, FaLaptopCode, FaBriefcase, FaHeart, FaHandshake } from 'react-icons/fa';
 
 const Section = ({ title, icon: Icon, children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
-  
   const [contentHeight, setContentHeight] = useState(0);
-  
-  // Use scrollHeight instead of getBoundingClientRect for reliable height calculation
+
   const expand = useSpring({
     height: isOpen ? contentHeight : 0,
-    overflow: isOpen ? 'visible' : 'hidden', // Ensure overflow is hidden when collapsed
+    overflow: isOpen ? 'visible' : 'hidden',
     config: { tension: 200, friction: 20 },
   });
 
   useEffect(() => {
     if (contentRef.current) {
-      // Update content height on open/close and ensure all content is included
       setContentHeight(isOpen ? contentRef.current.scrollHeight : 0);
     }
-  }, [isOpen, children]); // Recalculate height when children change
+  }, [isOpen, children]);
 
   return (
     <div className="mt-6">
@@ -74,9 +71,22 @@ const About = () => {
         {/* Experience Highlights Section */}
         <Section title="Experience Highlights" icon={FaBriefcase}>
           <ul className="space-y-4">
-            <li>Developed a custom equipment tracking system for a mid-sized company, improving asset management efficiency by 30%.</li>
-            <li>Built and deployed a task management app for freelance clients using React and Node.js, increasing project completion rates.</li>
-            <li>Worked closely with clients to deliver user-centric web applications, from initial design to final deployment.</li>
+            <li>
+              Developed and implemented a custom <strong>equipment tracking system</strong> for a mid-sized company,
+              resulting in a <strong>30% improvement</strong> in asset management efficiency.
+            </li>
+            <li>
+              Contributed to the development of <strong>EduAdapt</strong>, an adaptive learning platform utilizing AI
+              for personalized content, where I was involved in backend development and system integration.
+            </li>
+            <li>
+              Worked on <strong>tele-thrive</strong>, a virtual mental health support platform connecting patients
+              with therapists, focusing on frontend development and API integration to enhance the user experience.
+            </li>
+            <li>
+              Collaborated with clients to deliver <strong>user-centric web applications</strong>, handling
+              everything from initial design to final deployment while maintaining a strong focus on usability and performance.
+            </li>
           </ul>
         </Section>
 
