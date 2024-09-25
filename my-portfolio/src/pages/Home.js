@@ -3,7 +3,7 @@ import profilePhoto from '../assets/images/profile-photo.jpg';
 
 const Home = () => {
   return (
-    <section className="relative bg-custom-bg bg-cover bg-center min-h-screen flex items-center justify-center">
+    <section className="relative bg-black min-h-screen flex items-center justify-center">
       {/* Container for the layout */}
       <div className="relative z-10 w-full max-w-6xl px-4 flex flex-col items-center justify-center">
 
@@ -21,11 +21,11 @@ const Home = () => {
 
             {/* Text Content in the Center */}
             <div className="md:w-2/3 text-center md:text-left">
-              <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              <h1 className="text-5xl font-bold text-white mb-4">
                 Crafting Digital Experiences with Precision and Passion
               </h1>
-              <p className="text-xl text-black-700 dark:text-gray-300">
-                I'm a Full-Stack Developer creating seamless web applications. Based in Kenya, I combine creativity with technology to build innovative solutions.
+              <p className="text-xl text-gray-300">
+                I'm Millyanne, a Full-Stack Developer creating seamless web applications. Based in Kenya, I combine creativity with technology to build innovative solutions.
               </p>
               <a
                 href="/projects"
@@ -40,7 +40,7 @@ const Home = () => {
         {/* Services Section */}
         <section className="w-full mt-12">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center">What I Do</h2>
+            <h2 className="text-3xl font-bold text-center text-white">What I Do</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
               {/* Web Development Box */}
               <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">
