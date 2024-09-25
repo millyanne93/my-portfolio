@@ -1,9 +1,24 @@
 import React from 'react';
+import { FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt } from 'react-icons/fa';
+import { SiMongodb, SiFlask, SiTailwindcss, SiJavascript } from 'react-icons/si';
 
-// screenshots
+// Screenshots
 import trackrScreenshot from '../assets/images/trackr.png';
 import eduAdaptScreenshot from '../assets/images/eduadapt.png';
 import teleThriveScreenshot from '../assets/images/telethrive.png';
+
+// Icons for tech stack
+const techIcons = {
+  React: <FaReact className="text-blue-500" />,
+  "Node.js": <FaNodeJs className="text-green-500" />,
+  MongoDB: <SiMongodb className="text-green-600" />,
+  Python: <FaPython className="text-yellow-400" />,
+  Flask: <SiFlask className="text-black" />,
+  HTML: <FaHtml5 className="text-orange-500" />,
+  CSS: <FaCss3Alt className="text-blue-500" />,
+  JavaScript: <SiJavascript className="text-yellow-500" />,
+  "Tailwind CSS": <SiTailwindcss className="text-teal-500" />
+};
 
 // ProjectCard component
 const ProjectCard = ({ title, description, techStack, githubLink, liveDemoLink, screenshot }) => (
@@ -13,11 +28,8 @@ const ProjectCard = ({ title, description, techStack, githubLink, liveDemoLink, 
     <p className="mt-2 text-gray-700 dark:text-gray-300">{description}</p>
     <div className="mt-4 flex flex-wrap gap-2">
       {techStack.split(', ').map((tech, index) => (
-        <span
-          key={index}
-          className="px-3 py-1 bg-blue-500 text-white rounded-full text-xs"
-        >
-          {tech}
+        <span key={index} className="text-xl">
+          {techIcons[tech] || tech} {/* Fallback to text if no icon found */}
         </span>
       ))}
     </div>
@@ -27,13 +39,14 @@ const ProjectCard = ({ title, description, techStack, githubLink, liveDemoLink, 
     </div>
   </div>
 );
+
 // Projects page
 const Projects = () => {
   return (
     <section className="min-h-screen py-16 bg-custom-black">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           {/* Trackr project */}
           <ProjectCard
             title="Trackr"
@@ -41,7 +54,7 @@ const Projects = () => {
             techStack="React, Node.js, MongoDB, Tailwind CSS"
             githubLink="https://github.com/millyanne93/trackr"
             liveDemoLink="https://trackr-demo.com"
-            screenshot={trackrScreenshot} 
+            screenshot={trackrScreenshot}
           />
           {/* EduAdapt project */}
           <ProjectCard
@@ -49,7 +62,7 @@ const Projects = () => {
             description="An adaptive learning platform using AI for personalized content."
             techStack="Node.js, React, Gemini AI, Tailwind CSS"
             githubLink="https://github.com/millyanne93/eduadapt"
-            screenshot={eduAdaptScreenshot} 
+            screenshot={eduAdaptScreenshot}
           />
           {/* Tele-Thrive project */}
           <ProjectCard
@@ -57,9 +70,8 @@ const Projects = () => {
             description="Connecting patients with licensed therapists for virtual mental health support."
             techStack="Flask, HTML, CSS, JavaScript, Bootstrap"
             githubLink="https://github.com/ynot93/tele-thrive"
-            screenshot={teleThriveScreenshot} 
+            screenshot={teleThriveScreenshot}
           />
-          {/* More */}
         </div>
       </div>
     </section>
