@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.2a316c27.css",
-    "main.js": "./static/js/main.e6c562a2.js",
+    "main.css": "./static/css/main.52a7903b.css",
+    "main.js": "./static/js/main.0b58548a.js",
     "static/js/453.acca0757.chunk.js": "./static/js/453.acca0757.chunk.js",
     "static/media/profile-photo.jpg": "./static/media/profile-photo.7c04411ff513f9e520c1.jpg",
     "static/media/telethrive.png": "./static/media/telethrive.24ee246ce4cfd2c937ed.png",
@@ -9,12 +9,12 @@
     "static/media/background.webp": "./static/media/background.fc6141055c34ca7e41a0.webp",
     "static/media/trackr.png": "./static/media/trackr.6185f00ee63b2aba197b.png",
     "index.html": "./index.html",
-    "main.2a316c27.css.map": "./static/css/main.2a316c27.css.map",
-    "main.e6c562a2.js.map": "./static/js/main.e6c562a2.js.map",
+    "main.52a7903b.css.map": "./static/css/main.52a7903b.css.map",
+    "main.0b58548a.js.map": "./static/js/main.0b58548a.js.map",
     "453.acca0757.chunk.js.map": "./static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a316c27.css",
-    "static/js/main.e6c562a2.js"
+    "static/css/main.52a7903b.css",
+    "static/js/main.0b58548a.js"
   ]
 }
