@@ -7,13 +7,24 @@ const FadeInSection = ({ children, delay }) => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting));
+      entries.forEach(entry => {
+        console.log(entry.isIntersecting); // Debugging line
+        setVisible(entry.isIntersecting);
+      });
     });
+
     if (domRef.current) {
       observer.observe(domRef.current);
     }
-    return () => observer.disconnect();
-  }, []);
+
+    // Cleanup function to disconnect the observer
+    return () => {
+      if (domRef.current) {
+        observer.unobserve(domRef.current); // Unobserve the element
+      }
+      observer.disconnect(); // Disconnect the observer
+    };
+  }, []); // Empty dependency array to run only on mount/unmount
 
   return (
     <div
