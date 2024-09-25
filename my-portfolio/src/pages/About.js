@@ -8,7 +8,7 @@ import FadeInSection from '../components/FadeInSection';
 
 const About = () => {
   return (
-    <section className="min-h-screen py-12 bg-gray-50 dark:bg-gray-900 flex flex-col justify-center">
+    <section className="min-h-screen py-12 bg-custom-black flex flex-col justify-center">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
 
         {/* About Me Box */}

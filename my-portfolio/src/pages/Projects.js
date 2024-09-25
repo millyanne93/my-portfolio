@@ -7,7 +7,7 @@ import teleThriveScreenshot from '../assets/images/telethrive.png';
 
 // ProjectCard component
 const ProjectCard = ({ title, description, techStack, githubLink, liveDemoLink, screenshot }) => (
-  <div className="border border-gray-200 dark:border-gray-700 p-6 rounded-lg">
+  <div className="border border-gray-500 dark:border-gray-700 p-6 rounded-lg">
     <img src={screenshot} alt={`${title} Screenshot`} className="w-full h-48 object-cover rounded-lg mb-4" />
     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>
     <p className="mt-2 text-gray-700 dark:text-gray-300">{description}</p>
@@ -22,7 +22,7 @@ const ProjectCard = ({ title, description, techStack, githubLink, liveDemoLink, 
 // Projects page
 const Projects = () => {
   return (
-    <section className="min-h-screen py-16">
+    <section className="min-h-screen py-16 bg-custom-black">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
