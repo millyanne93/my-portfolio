@@ -18,10 +18,10 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex space-x-4">
-          <Link to={`${process.env.PUBLIC_URL}/#/`} className="text-white dark:text-gray-300">Home</Link>
-          <Link to={`${process.env.PUBLIC_URL}/#/about`} className="text-white dark:text-gray-300">About</Link>
-          <Link to={`${process.env.PUBLIC_URL}/#/projects`} className="text-white dark:text-gray-300">Projects</Link>
-          <Link to={`${process.env.PUBLIC_URL}/#/contact`} className="text-white dark:text-gray-300">Contact</Link>
+          <Link to={`${process.env.PUBLIC_URL}/`} className="text-white dark:text-gray-300">Home</Link>
+          <Link to={`${process.env.PUBLIC_URL}/about`} className="text-white dark:text-gray-300">About</Link>
+          <Link to={`${process.env.PUBLIC_URL}/projects`} className="text-white dark:text-gray-300">Projects</Link>
+          <Link to={`${process.env.PUBLIC_URL}/contact`} className="text-white dark:text-gray-300">Contact</Link>
           <button onClick={toggleDarkMode} className="ml-4 text-white dark:text-gray-300">
             {isDarkMode ? 'Light Mode' : 'Dark Mode'}
           </button>
