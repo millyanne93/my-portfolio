@@ -1,11 +1,15 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: 'class', // Enable dark mode
+  purge: {
+    content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+    options: {
+      safelist: ['fade-in-section', 'visible'], // Ensure these classes are not purged
+    },
+  },
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        'custom-black': '#000000', // Define your custom black color
+        'custom-black': '#000000',
       },
     },
   },

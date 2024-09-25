@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import 'intersection-observer';
 
 const FadeInSection = ({ children, delay }) => {
   const domRef = useRef();
