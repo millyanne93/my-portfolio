@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div>
           <Link to={`${process.env.PUBLIC_URL}/#/`} className="text-xl font-semibold text-white dark:text-gray-200">
-            Personal Portfolio
+            Portfolio
           </Link>
         </div>
         <div className="flex space-x-4">
