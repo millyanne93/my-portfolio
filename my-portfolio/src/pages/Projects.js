@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt } from 'react-icons/fa';
-import { SiMongodb, SiFlask, SiTailwindcss, SiJavascript } from 'react-icons/si';
+import { SiMongodb, SiFlask, SiTailwindcss, SiJavascript, SiBootstrap } from 'react-icons/si'; // Import Bootstrap icon
 
 // Screenshots
 import trackrScreenshot from '../assets/images/trackr.png';
@@ -17,15 +17,17 @@ const techIcons = {
   HTML: <FaHtml5 className="text-orange-500" />,
   CSS: <FaCss3Alt className="text-blue-500" />,
   JavaScript: <SiJavascript className="text-yellow-500" />,
-  "Tailwind CSS": <SiTailwindcss className="text-teal-500" />
+  "Tailwind CSS": <SiTailwindcss className="text-teal-500" />,
+  "Gemini AI": <FaPython className="text-purple-500" />, // Placeholder icon for Gemini AI
+  Bootstrap: <SiBootstrap className="text-purple-600" /> // Bootstrap icon
 };
 
 // ProjectCard component
 const ProjectCard = ({ title, description, techStack, githubLink, liveDemoLink, screenshot }) => (
   <div className="p-6 rounded-lg hover:shadow-lg transition-shadow duration-300">
     <img src={screenshot} alt={`${title} Screenshot`} className="w-full h-48 object-cover rounded-lg mb-4" />
-    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>
-    <p className="mt-2 text-gray-700 dark:text-gray-300">{description}</p>
+    <h3 className="text-xl font-semibold text-white dark:text-white">{title}</h3>
+    <p className="mt-2 text-gray-700 dark:text-gray-700">{description}</p>
     <div className="mt-4 flex flex-wrap gap-2">
       {techStack.split(', ').map((tech, index) => (
         <span key={index} className="text-xl">
@@ -45,7 +47,7 @@ const Projects = () => {
   return (
     <section className="min-h-screen py-16 bg-custom-black">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">Projects</h2>
+        <h2 className="text-3xl font-semibold text-white dark:text-white">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           {/* Trackr project */}
           <ProjectCard
