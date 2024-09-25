@@ -5,78 +5,79 @@ const Home = () => {
   return (
     <section className="relative bg-custom-bg bg-cover bg-center min-h-screen flex items-center justify-center">
       {/* Container for the layout */}
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl px-4">
+      <div className="relative z-10 w-full max-w-6xl px-4 flex flex-col items-center justify-center">
 
-        {/* Text Content on the Left */}
-        <div className="md:w-1/2 text-left">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white transition-all duration-500 ease-in-out transform hover:scale-110">
-            Hi there, I'm Millyanne Wanjala
-          </h1>
-          <p className="mt-4 text-black-700 dark:text-gray-300">
-            A Full-Stack Developer with experience in building web applications. Based in Kenya, I specialize in creating seamless user experiences using modern technologies.
-          </p>
-          <a
-            href="/projects"
-            role="button"
-            className="mt-12 px-8 py-3 bg-teal-500 hover:bg-teal-400 text-white rounded-full transition-all duration-300 ease-in-out transform hover:scale-105"
-          >
-            See My Projects
-          </a>
-        </div>
+        {/* Profile Section */}
+        <div className="w-full flex items-center justify-center">
+          <div className="flex flex-col md:flex-row items-center w-full max-w-6xl">
+            {/* Profile Photo on the Left */}
+            <div className="md:w-1/3 flex justify-center md:justify-start mb-8 md:mb-0">
+              <img
+                src={profilePhoto}
+                alt="Profile Photo"
+                className="rounded-full w-64 h-64 object-cover shadow-lg"
+              />
+            </div>
 
-        {/* Photo on the Right with Blended Background */}
-        <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center">
-          <div className="relative rounded-full bg-gradient-to-br from-white/40 via-transparent to-gray-900/40 p-2 shadow-2xl">
-            <img
-              src={profilePhoto}
-              alt="Profile Photo"
-              className="rounded-full w-64 h-64 object-cover opacity-90 mix-blend-overlay shadow-lg"
-            />
+            {/* Text Content in the Center */}
+            <div className="md:w-2/3 text-center md:text-left">
+              <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                Crafting Digital Experiences with Precision and Passion
+              </h1>
+              <p className="text-xl text-black-700 dark:text-gray-300">
+                I'm a Full-Stack Developer creating seamless web applications. Based in Kenya, I combine creativity with technology to build innovative solutions.
+              </p>
+              <a
+                href="/projects"
+                className="inline-block mt-6 px-8 py-3 bg-teal-500 hover:bg-teal-400 text-white rounded-full transition-all duration-300"
+              >
+                See My Projects
+              </a>
+            </div>
           </div>
         </div>
+
+        {/* Services Section */}
+        <section className="w-full mt-12">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center">What I Do</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+              {/* Web Development Box */}
+              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-4">&#127760;</span>
+                  <h3 className="text-lg font-semibold text-black-700 dark:text-gray-300">Web Development</h3>
+                </div>
+                <p className="text-black-600 dark:text-gray-400">
+                  I design responsive websites using HTML, CSS, JavaScript, and React.
+                </p>
+              </div>
+
+              {/* Backend Services Box */}
+              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-4">&#128187;</span>
+                  <h3 className="text-lg font-semibold text-black-700 dark:text-gray-300">Backend Services</h3>
+                </div>
+                <p className="text-black-600 dark:text-gray-400">
+                  I build scalable backend systems with Node.js and Python.
+                </p>
+              </div>
+
+              {/* DevOps Box */}
+              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-4">&#9881;</span>
+                  <h3 className="text-lg font-semibold text-black-700 dark:text-gray-300">DevOps</h3>
+                </div>
+                <p className="text-black-600 dark:text-gray-400">
+                  I optimize application deployment using CI/CD and cloud services.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-
-      {/* Services Section - Aligned Left with Bullet Points and Descriptions */}
-      <section className="py-12 w-full">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-start">
-          {/* Left side with Title */}
-          <div className="md:w-1/2 text-left">
-            <h2 className="text-3xl font-bold">What I Do</h2>
-            <ul className="mt-8 space-y-6">
-              {/* Each point with a symbol and description */}
-              <li className="flex flex-col items-start">
-                <div className="flex items-center">
-                  <span className="text-2xl mr-4">&#127760;</span> {/* Globe with Meridians for Web Development */}
-                  <p className="text-lg font-semibold text-black-700 dark:text-gray-300">Web Development</p>
-                </div>
-                <p className="mt-2 text-black-600 dark:text-gray-400">
-                  I design and build responsive, user-friendly websites using modern web technologies like HTML, CSS, JavaScript, and React. My focus is on creating seamless experiences that work across all devices and browsers.
-                </p>
-              </li>
-
-              <li className="flex flex-col items-start">
-                <div className="flex items-center">
-                  <span className="text-2xl mr-4">&#128187;</span> {/* Desktop Computer for Backend Services */}
-                  <p className="text-lg font-semibold text-black-700 dark:text-gray-300">Backend Services</p>
-                </div>
-                <p className="mt-2 text-black-600 dark:text-gray-400">
-                  I develop robust and scalable backend systems using technologies like Node.js and Python. I handle server-side logic, database management, and API development to ensure smooth data flow and application functionality.
-                </p>
-              </li>
-
-              <li className="flex flex-col items-start">
-                <div className="flex items-center">
-                  <span className="text-2xl mr-4">&#9881;</span> {/* Gear for DevOps */}
-                  <p className="text-lg font-semibold text-black-700 dark:text-gray-300">DevOps</p>
-                </div>
-                <p className="mt-2 text-black-600 dark:text-gray-400">
-                  I work on automating and optimizing the deployment, monitoring, and scaling of applications using CI/CD pipelines and cloud services. My goal is to streamline development processes and ensure systems are running efficiently.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
     </section>
   );
 };
