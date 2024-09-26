@@ -46,7 +46,7 @@ const Home = () => {
             <h2 className="text-3xl font-bold text-center text-white">What I Do</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
               {/* Web Development Box */}
-              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-purple-800 border border-purple-200">
+              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 border border-purple-200">
                 <div className="flex items-center mb-4">
                   <span className="text-2xl mr-4">&#127760;</span>
                   <h3 className="text-lg font-semibold text-black-700 dark:text-gray-300">Web Development</h3>
@@ -57,7 +57,7 @@ const Home = () => {
               </div>
 
               {/* Backend Services Box */}
-              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-purple-800 border border-purple-200">
+              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 border border-purple-200">
                 <div className="flex items-center mb-4">
                   <span className="text-2xl mr-4">&#128187;</span>
                   <h3 className="text-lg font-semibold text-black-700 dark:text-gray-300">Backend Services</h3>
@@ -68,7 +68,7 @@ const Home = () => {
               </div>
 
               {/* DevOps Box */}
-              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-purple-800 border border-purple-200">
+              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 border border-purple-200">
                 <div className="flex items-center mb-4">
                   <span className="text-2xl mr-4">&#9881;</span>
                   <h3 className="text-lg font-semibold text-black-700 dark:text-gray-300">DevOps</h3>
