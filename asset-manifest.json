@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.ef925d3a.css",
-    "main.js": "./static/js/main.846377f8.js",
+    "main.js": "./static/js/main.90563262.js",
     "static/js/453.acca0757.chunk.js": "./static/js/453.acca0757.chunk.js",
     "static/media/profile-photo.jpg": "./static/media/profile-photo.7c04411ff513f9e520c1.jpg",
     "static/media/telethrive.png": "./static/media/telethrive.24ee246ce4cfd2c937ed.png",
@@ -9,11 +9,11 @@
     "static/media/trackr.png": "./static/media/trackr.6185f00ee63b2aba197b.png",
     "index.html": "./index.html",
     "main.ef925d3a.css.map": "./static/css/main.ef925d3a.css.map",
-    "main.846377f8.js.map": "./static/js/main.846377f8.js.map",
+    "main.90563262.js.map": "./static/js/main.90563262.js.map",
     "453.acca0757.chunk.js.map": "./static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ef925d3a.css",
-    "static/js/main.846377f8.js"
+    "static/js/main.90563262.js"
   ]
 }
