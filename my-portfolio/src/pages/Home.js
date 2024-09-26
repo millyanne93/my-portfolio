@@ -1,8 +1,14 @@
-import React from 'react';
-import profilePhoto from '../assets/images/profile-photo.jpg';
+import React, { useEffect, useState } from 'react';
 import { Typed } from 'react-typed';
+import profilePhoto from '../assets/images/profile-photo.jpg';
 
 const Home = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <section className="relative bg-black min-h-screen flex items-center justify-center">
       {/* Container for the layout */}
@@ -24,20 +30,20 @@ const Home = () => {
             <div className="md:w-2/3 text-center md:text-left">
               {/* Typing animation using react-typed */}
               <h1 className="text-5xl font-bold text-white mb-4">
-                <Typed
-                  strings={[
-                    'Crafting',
-                    'Crafting Digital',
-                    'Crafting Digital Experiences',
-                    'Crafting Digital Experiences with', 
-                    'Crafting Digital Experiences with Precision', 
-                    'Crafting Digital Experiences with Precision and',
-                    'Crafting Digital Experiences with Precision and Power',
-                  ]}
-                  typeSpeed={40}
-                  backSpeed={50}
-                  loop={false}
-                />
+                {isMounted && (
+                  <Typed
+                    strings={[
+                      'Crafting',
+                      'Crafting Digital',
+                      'Crafting Digital Experiences',
+                      'Crafting Digital Experiences with Precision',
+                      'Crafting Digital Experiences with Precision and Power',
+                    ]}
+                    typeSpeed={40}
+                    backSpeed={50}
+                    loop={false}
+                  />
+                )}
               </h1>
               <p className="text-xl text-gray-500">
                 I'm Millyanne, a Full-Stack Developer creating seamless web applications. Based in Kenya, I combine creativity with technology to build innovative solutions.
