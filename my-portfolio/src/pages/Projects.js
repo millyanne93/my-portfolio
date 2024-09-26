@@ -24,10 +24,10 @@ const techIcons = {
 
 // ProjectCard component
 const ProjectCard = ({ title, description, techStack, githubLink, liveDemoLink, screenshot }) => (
-  <div className="p-6 rounded-lg hover:shadow-lg transition-shadow duration-300">
+  <div className="p-6 rounded-lg border border-gray-300 hover:shadow-lg transition-shadow duration-300">
     <img src={screenshot} alt={`${title} Screenshot`} className="w-full h-48 object-cover rounded-lg mb-4" />
     <h3 className="text-xl font-semibold text-white dark:text-white">{title}</h3>
-    <p className="mt-2 text-gray-700 dark:text-gray-700">{description}</p>
+    <p className="mt-2 text-gray-900 dark:text-gray-900">{description}</p>
     <div className="mt-4 flex flex-wrap gap-2">
       {techStack.split(', ').map((tech, index) => (
         <span key={index} className="text-xl">
@@ -36,8 +36,8 @@ const ProjectCard = ({ title, description, techStack, githubLink, liveDemoLink, 
       ))}
     </div>
     <div className="mt-6">
-      <a href={githubLink} className="bg-teal-500 text-white px-4 py-2 rounded-lg mr-4 hover:bg-teal-400">GitHub</a>
-      {liveDemoLink && <a href={liveDemoLink} className="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-400">Live Demo</a>}
+      <a href={githubLink} className="bg-gradient-to-r from-purple-400 to-purple-600 text-white px-4 py-2 rounded-full mr-4 hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-700">GitHub</a>
+      {liveDemoLink && <a href={liveDemoLink} className="bg-gradient-to-r from-purple-400 to-purple-600 text-white px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-700">Live Demo</a>}
     </div>
   </div>
 );
