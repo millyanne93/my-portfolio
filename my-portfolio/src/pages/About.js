@@ -5,6 +5,7 @@ import {
 } from 'react-icons/fa';
 import { SiDjango, SiMongodb, SiMysql } from 'react-icons/si';
 import FadeInSection from '../components/FadeInSection';
+import { SiFlask } from 'react-icons/si';
 
 const About = () => {
   return (

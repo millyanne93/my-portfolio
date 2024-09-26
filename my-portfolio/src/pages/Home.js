@@ -1,6 +1,6 @@
 import React from 'react';
 import profilePhoto from '../assets/images/profile-photo.jpg';
-import Typed from 'react-typed';
+import { Typed } from 'react-typed';
 
 const Home = () => {
   return (
