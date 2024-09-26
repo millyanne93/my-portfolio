@@ -7,21 +7,13 @@ import { SiDjango, SiMongodb, SiMysql } from 'react-icons/si';
 import FadeInSection from '../components/FadeInSection';
 
 const About = () => {
-  // Gradient border style
-  const gradientBorderStyle = {
-    border: '2px solid',
-    borderImage: 'linear-gradient(90deg, #A28DEC, #FFFFFF) 1',
-    padding: '1.5rem',
-    borderRadius: '2.0rem',
-  };
-
   return (
     <section className="min-h-screen py-12 bg-custom-black flex flex-col justify-center">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
 
         {/* About Me Box */}
         <FadeInSection delay={100}>
-          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg flex flex-col" borderRadius="2.0rem">
+          <div className="bg-white rounded-lg shadow-lg dark:bg-gray-800 border border-gray-500">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
               <FaUser className="mr-2 text-[#A28DEC]" /> About Me
             </h3>
@@ -33,7 +25,7 @@ const About = () => {
 
         {/* Education Box */}
         <FadeInSection delay={300}>
-          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg flex flex-col" borderRadius="2.0rem">
+          <div className="bg-white rounded-lg shadow-lg dark:bg-gray-800 border border-gray-500">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
               <FaGraduationCap className="mr-2 text-[#A28DEC]" /> My Education Journey
             </h3>
@@ -47,7 +39,7 @@ const About = () => {
 
         {/* Techstack Box */}
         <FadeInSection delay={500}>
-          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg flex flex-col" borderRadius="2.0rem">
+          <div className="bg-white rounded-lg shadow-lg dark:bg-gray-800 border border-gray-500">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
               <FaLaptopCode className="mr-2 text-[#A28DEC]" /> My Techstack
             </h3>
@@ -73,7 +65,7 @@ const About = () => {
 
         {/* Other Sections */}
         <FadeInSection delay={700}>
-          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg flex flex-col" borderRadius="2.0rem">
+          <div className="bg-white rounded-lg shadow-lg dark:bg-gray-800 border border-gray-500">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
               <FaBriefcase className="mr-2 text-[#A28DEC]" /> Experience Highlights
             </h3>
@@ -86,7 +78,7 @@ const About = () => {
         </FadeInSection>
 
         <FadeInSection delay={900}>
-          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg flex flex-col" borderRadius="2.0rem">
+          <div className="bg-white rounded-lg shadow-lg dark:bg-gray-800 border border-gray-500">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
               <FaHeart className="mr-2 text-[#A28DEC]" /> Hobbies and Interests
             </h3>
@@ -97,12 +89,12 @@ const About = () => {
         </FadeInSection>
 
         <FadeInSection delay={1100}>
-          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg flex flex-col" borderRadius="2.0rem">
+          <div className="bg-white rounded-lg shadow-lg dark:bg-gray-800 border border-gray-500">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
               <FaHandshake className="mr-2 text-[#A28DEC]" /> Let's Connect
             </h3>
             <p className="mt-4 text-black-700 dark:text-gray-300">
-              Interested in working together? <a href="/contact" className="text-[#A28DEC]">Hire me</a>.
+              Interested in working together? <a href="/contact" className="text-teal-500">Reach out</a>.
             </p>
           </div>
         </FadeInSection>
