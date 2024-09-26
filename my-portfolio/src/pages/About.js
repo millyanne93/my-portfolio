@@ -15,7 +15,7 @@ const About = () => {
         <FadeInSection delay={100}>
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
-              <FaUser className="mr-2 text-teal-500" /> About Me
+              <FaUser className="mr-2 text-[#A28DEC]" /> About Me
             </h3>
             <p className="mt-4 text-black-700 dark:text-gray-300">
               I am a Full-stack developer combining tech and business expertise. Passionate about building smart web solutions.
@@ -27,7 +27,7 @@ const About = () => {
         <FadeInSection delay={300}>
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
-              <FaGraduationCap className="mr-2 text-teal-500" /> My Education Journey
+              <FaGraduationCap className="mr-2 text-[#A28DEC]" /> My Education Journey
             </h3>
             <ul className="mt-4 space-y-2 text-black-700 dark:text-gray-300">
               <li>BSc. Information Sciences</li>
@@ -41,7 +41,7 @@ const About = () => {
         <FadeInSection delay={500}>
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
-              <FaLaptopCode className="mr-2 text-teal-500" /> My Techstack
+              <FaLaptopCode className="mr-2 text-[#A28DEC]" /> My Techstack
             </h3>
             <ul className="mt-4 space-y-2 text-black-700 dark:text-gray-300">
               <li className="flex items-center">
@@ -67,7 +67,7 @@ const About = () => {
         <FadeInSection delay={700}>
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
-              <FaBriefcase className="mr-2 text-teal-500" /> Experience Highlights
+              <FaBriefcase className="mr-2 text-[#A28DEC]" /> Experience Highlights
             </h3>
             <ul className="mt-4 space-y-2 text-black-700 dark:text-gray-300">
               <li>Developed an equipment tracking system improving asset management.</li>
@@ -80,7 +80,7 @@ const About = () => {
         <FadeInSection delay={900}>
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
-              <FaHeart className="mr-2 text-teal-500" /> Hobbies and Interests
+              <FaHeart className="mr-2 text-[#A28DEC]" /> Hobbies and Interests
             </h3>
             <p className="mt-4 text-black-700 dark:text-gray-300">
               Tech trends, travel, community service, and creative projects.
@@ -91,7 +91,7 @@ const About = () => {
         <FadeInSection delay={1100}>
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
-              <FaHandshake className="mr-2 text-teal-500" /> Let's Connect
+              <FaHandshake className="mr-2 text-[#A28DEC]" /> Let's Connect
             </h3>
             <p className="mt-4 text-black-700 dark:text-gray-300">
               Interested in working together? <a href="/contact" className="text-teal-500">Hire me</a>.

@@ -24,30 +24,30 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-teal-500 dark:bg-teal-700 p-4 shadow-md">
+    <nav className="bg-black p-4 shadow-md">
       <div className="container mx-auto flex justify-center items-center">
         <div className="flex space-x-4">
           <Link
             to={`${process.env.PUBLIC_URL}/`}
-            className="bg-white dark:bg-gray-800 text-teal-500 dark:text-white py-2 px-4 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+            className="bg-white dark:bg-gray-800 text-[#A28DEC] dark:text-white py-2 px-4 rounded-full shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
           >
             Home
           </Link>
           <Link
             to={`${process.env.PUBLIC_URL}/about`}
-            className="bg-white dark:bg-gray-800 text-teal-500 dark:text-white py-2 px-4 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+            className="bg-white dark:bg-gray-800 text-[#A28DEC] dark:text-white py-2 px-4 rounded-full shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
           >
             About
           </Link>
           <Link
             to={`${process.env.PUBLIC_URL}/projects`}
-            className="bg-white dark:bg-gray-800 text-teal-500 dark:text-white py-2 px-4 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+            className="bg-white dark:bg-gray-800 text-[#A28DEC] dark:text-white py-2 px-4 rounded-full shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
           >
             Projects
           </Link>
           <Link
             to={`${process.env.PUBLIC_URL}/contact`}
-            className="bg-white dark:bg-gray-800 text-teal-500 dark:text-white py-2 px-4 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+            className="bg-white dark:bg-gray-800 text-[#A28DEC] dark:text-white py-2 px-4 rounded-full shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
           >
             Contact
           </Link>

@@ -22,14 +22,17 @@ const Home = () => {
             {/* Text Content in the Center */}
             <div className="md:w-2/3 text-center md:text-left">
               <h1 className="text-5xl font-bold text-white mb-4">
-                Crafting Digital Experiences with Precision and Passion
+                Crafting Digital Experiences with 
+                <span style={{ color: '#A28DEC' }}> Precision </span>
+                and
+                <span style={{ color: '#A28DEC' }}> Power </span>
               </h1>
-              <p className="text-xl text-gray-300">
+              <p className="text-xl text-gray-500">
                 I'm Millyanne, a Full-Stack Developer creating seamless web applications. Based in Kenya, I combine creativity with technology to build innovative solutions.
               </p>
               <a
                 href="/projects"
-                className="inline-block mt-6 px-8 py-3 bg-teal-500 hover:bg-teal-400 text-white rounded-full transition-all duration-300"
+                className="inline-block mt-6 px-8 py-3 bg-[#A28DEC] hover:bg-[#9687E3] text-white rounded-full transition-all duration-300"
               >
                 See My Projects
               </a>
