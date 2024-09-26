@@ -30,9 +30,9 @@ const About = () => {
               <FaGraduationCap className="mr-2 text-[#A28DEC]" /> My Education Journey
             </h3>
             <ul className="mt-4 space-y-2 text-black-700 dark:text-gray-300">
-              <li>BSc. Information Sciences</li>
-              <li>Software Engineering Program</li>
-              <li>Project Management Fundamentals</li>
+              <li>BSc. Information Sciences-Maasai Mara University</li>
+              <li>Software Engineering Program- African Leadership Experience(ALX-SE)</li>
+              <li>Project Management Fundamentals-Coursera</li>
             </ul>
           </div>
         </FadeInSection>
