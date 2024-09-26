@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       colors: {
         'custom-black': '#000000',
+        'custom-gradient': '#A28DEC', // Gradient color definition
       },
     },
   },

@@ -37,6 +37,13 @@
   }
 }
 
+/* Gradient border custom class */
+.gradient-border {
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(90deg, #A28DEC, #FFFFFF) 1;
+}
+
 /* Fade-in Section Styles */
 .fade-in-section {
   opacity: 0;
