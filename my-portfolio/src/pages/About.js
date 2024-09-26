@@ -7,12 +7,12 @@ import { SiDjango, SiMongodb, SiMysql } from 'react-icons/si';
 import FadeInSection from '../components/FadeInSection';
 
 const About = () => {
-  // Gradient border style for each section
+  // Gradient border style
   const gradientBorderStyle = {
     border: '2px solid',
     borderImage: 'linear-gradient(90deg, #A28DEC, #FFFFFF) 1',
     padding: '1.5rem',
-    borderRadius: '0.5rem'
+    borderRadius: '2.0rem',
   };
 
   return (
