@@ -47,7 +47,7 @@ const Projects = () => {
   return (
     <section className="min-h-screen py-16 bg-custom-black">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold text-white dark:text-white">Projects</h2>
+        <h2 className="text-3xl font-semibold text-white dark:text-white">Recent Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           {/* Trackr project */}
           <ProjectCard

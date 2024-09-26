@@ -21,7 +21,7 @@ const About = () => {
 
         {/* About Me Box */}
         <FadeInSection delay={100}>
-          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 shadow-lg flex flex-col" borderRadius="2.0rem">
+          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg flex flex-col" borderRadius="2.0rem">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
               <FaUser className="mr-2 text-[#A28DEC]" /> About Me
             </h3>
@@ -33,7 +33,7 @@ const About = () => {
 
         {/* Education Box */}
         <FadeInSection delay={300}>
-          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 shadow-lg flex flex-col" borderRadius="2.0rem">
+          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg flex flex-col" borderRadius="2.0rem">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
               <FaGraduationCap className="mr-2 text-[#A28DEC]" /> My Education Journey
             </h3>
@@ -47,7 +47,7 @@ const About = () => {
 
         {/* Techstack Box */}
         <FadeInSection delay={500}>
-          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 shadow-lg flex flex-col" borderRadius="2.0rem">
+          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg flex flex-col" borderRadius="2.0rem">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
               <FaLaptopCode className="mr-2 text-[#A28DEC]" /> My Techstack
             </h3>
@@ -73,7 +73,7 @@ const About = () => {
 
         {/* Other Sections */}
         <FadeInSection delay={700}>
-          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 shadow-lg flex flex-col" borderRadius="2.0rem">
+          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg flex flex-col" borderRadius="2.0rem">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
               <FaBriefcase className="mr-2 text-[#A28DEC]" /> Experience Highlights
             </h3>
@@ -86,7 +86,7 @@ const About = () => {
         </FadeInSection>
 
         <FadeInSection delay={900}>
-          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 shadow-lg flex flex-col" borderRadius="2.0rem">
+          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg flex flex-col" borderRadius="2.0rem">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
               <FaHeart className="mr-2 text-[#A28DEC]" /> Hobbies and Interests
             </h3>
@@ -97,7 +97,7 @@ const About = () => {
         </FadeInSection>
 
         <FadeInSection delay={1100}>
-          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 shadow-lg flex flex-col" borderRadius="2.0rem">
+          <div style={gradientBorderStyle} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg flex flex-col" borderRadius="2.0rem">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
               <FaHandshake className="mr-2 text-[#A28DEC]" /> Let's Connect
             </h3>
