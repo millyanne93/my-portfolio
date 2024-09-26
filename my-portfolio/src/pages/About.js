@@ -54,6 +54,7 @@ const About = () => {
                 <FaNodeJs className="mr-2 text-green-500" /> Node.js
                 <FaPython className="ml-4 mr-2 text-blue-500" /> Python
                 <SiDjango className="ml-4 mr-2 text-green-700" /> Django
+                 <SiFlask className="ml-4 mr-2 text-black-500" /> Flask
               </li>
               <li className="flex items-center">
                 <SiMongodb className="mr-2 text-green-500" /> MongoDB
@@ -94,7 +95,7 @@ const About = () => {
               <FaHandshake className="mr-2 text-[#A28DEC]" /> Let's Connect
             </h3>
             <p className="mt-4 text-black-700 dark:text-gray-300">
-              Interested in working together? <a href="/contact" className="text-teal-500">Hire me</a>.
+              Interested in working together? <a href="/contact" className="text-[#A28DEC]">Reach Out</a>.
             </p>
           </div>
         </FadeInSection>

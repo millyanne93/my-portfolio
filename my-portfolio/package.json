@@ -16,6 +16,7 @@
     "react-router-dom": "^6.26.2",
     "react-scripts": "^5.0.1",
     "react-spring": "^9.7.4",
+    "react-typed": "^2.0.12",
     "tailwindcss": "^3.4.11",
     "web-vitals": "^2.1.4"
   },

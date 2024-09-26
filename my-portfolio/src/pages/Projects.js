@@ -26,8 +26,8 @@ const techIcons = {
 const ProjectCard = ({ title, description, techStack, githubLink, liveDemoLink, screenshot }) => (
   <div className="p-6 rounded-lg border border-gray-900 hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
     <img src={screenshot} alt={`${title} Screenshot`} className="w-full h-48 object-cover rounded-lg mb-4" />
-    <h3 className="text-xl font-semibold text-white dark:text-white">{title}</h3>
-    <p className="mt-2 text-gray-300 dark:text-gray-300">{description}</p>
+    <h3 className="text-xl font-semibold text-black dark:text-white">{title}</h3>
+    <p className="mt-2 text-black dark:text-gray-300">{description}</p>
     <div className="mt-4 flex flex-wrap gap-2">
       {techStack.split(', ').map((tech, index) => (
         <span key={index} className="text-xl">

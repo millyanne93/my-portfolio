@@ -1,5 +1,6 @@
 import React from 'react';
 import profilePhoto from '../assets/images/profile-photo.jpg';
+import Typed from 'react-typed';
 
 const Home = () => {
   return (
@@ -21,11 +22,22 @@ const Home = () => {
 
             {/* Text Content in the Center */}
             <div className="md:w-2/3 text-center md:text-left">
+              {/* Typing animation using react-typed */}
               <h1 className="text-5xl font-bold text-white mb-4">
-                Crafting Digital Experiences with 
-                <span style={{ color: '#A28DEC' }}> Precision </span>
-                and
-                <span style={{ color: '#A28DEC' }}> Power </span>
+                <Typed
+                  strings={[
+                    'Crafting',
+                    'Crafting Digital',
+                    'Crafting Digital Experiences',
+                    'Crafting Digital Experiences with', 
+                    'Crafting Digital Experiences with Precision', 
+                    'Crafting Digital Experiences with Precision and',
+                    'Crafting Digital Experiences with Precision and Power',
+                  ]}
+                  typeSpeed={40}
+                  backSpeed={50}
+                  loop={false}
+                />
               </h1>
               <p className="text-xl text-gray-500">
                 I'm Millyanne, a Full-Stack Developer creating seamless web applications. Based in Kenya, I combine creativity with technology to build innovative solutions.
@@ -46,7 +58,7 @@ const Home = () => {
             <h2 className="text-3xl font-bold text-center text-white">What I Do</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
               {/* Web Development Box */}
-              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 border border-purple-900">
+              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">
                 <div className="flex items-center mb-4">
                   <span className="text-2xl mr-4">&#127760;</span>
                   <h3 className="text-lg font-semibold text-black-700 dark:text-gray-300">Web Development</h3>
@@ -57,7 +69,7 @@ const Home = () => {
               </div>
 
               {/* Backend Services Box */}
-              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 border border-purple-900">
+              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">
                 <div className="flex items-center mb-4">
                   <span className="text-2xl mr-4">&#128187;</span>
                   <h3 className="text-lg font-semibold text-black-700 dark:text-gray-300">Backend Services</h3>
@@ -68,7 +80,7 @@ const Home = () => {
               </div>
 
               {/* DevOps Box */}
-              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 border border-purple-900">
+              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">
                 <div className="flex items-center mb-4">
                   <span className="text-2xl mr-4">&#9881;</span>
                   <h3 className="text-lg font-semibold text-black-700 dark:text-gray-300">DevOps</h3>
