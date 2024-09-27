@@ -1,12 +1,12 @@
 import React from 'react';
-import { FaLinkedin, FaTwitter, FaBriefcase, FaEnvelope } from 'react-icons/fa'; // Import social icons
+import { FaLinkedin, FaTwitter, FaBriefcase, FaEnvelope, FaGithub } from 'react-icons/fa'; // Import GitHub icon
 
 const Contact = () => {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center bg-custom-black">
       {/* Contact Form */}
       <form className="w-full max-w-lg p-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-900">
-        <h2 className="text-3xl font-semibold text-black-700 dark:text-gray-300 mb-6">Contact Me</h2>
+        <h2 className="text-xl font-semibold text-black-700 dark:text-gray-300 mb-6">Have a Project in Mind? Let's Chat!</h2>
         <div className="mb-4">
           <label className="block text-sm font-semibold text-black-600 dark:text-gray-300" htmlFor="name">
             Name
@@ -80,9 +80,19 @@ const Contact = () => {
         >
           <FaEnvelope size={30} />
         </a>
+        {/* GitHub Profile Link */}
+        <a
+          href="https://github.com/millyanne93"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-gray-400"
+        >
+          <FaGithub size={30} />
+        </a>
       </div>
     </section>
   );
 };
 
 export default Contact;
+

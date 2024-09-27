@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { Typed } from 'react-typed';
+import React, { useState, useEffect } from 'react';
 import profilePhoto from '../assets/images/profile-photo.jpg';
 
 const Home = () => {
-  const [isMounted, setIsMounted] = useState(false);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const words = ['Crafting', 'Digital', 'Experiences', 'with', 'Precision', 'and', 'Power'];
 
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
+    if (currentWordIndex < words.length) {
+      const timeout = setTimeout(() => {
+        setCurrentWordIndex(currentWordIndex + 1);
+      }, 500); // Adjust the delay to control how fast each word appears (500ms here)
+      return () => clearTimeout(timeout);
+    }
+  }, [currentWordIndex, words.length]);
 
   return (
     <section className="relative bg-black min-h-screen flex items-center justify-center">
@@ -28,28 +33,14 @@ const Home = () => {
 
             {/* Text Content in the Center */}
             <div className="md:w-2/3 text-center md:text-left">
-              {/* Typing animation using react-typed */}
-              <h1 className="text-5xl font-bold text-white mb-4">
-                {isMounted && (
-                  <Typed
-                    strings={[
-                      'Crafting',
-                      'Crafting Digital',
-                      'Crafting Digital Experiences',
-                      'Crafting Digital Experiences with Precision',
-                      'Crafting Digital Experiences with Precision and Power',
-                    ]}
-                    typeSpeed={40}
-                    backSpeed={50}
-                    loop={false}
-                  />
-                )}
+              <h1 className="text-5xl font-bold text-[#A28DEC]">
+                {words.slice(0, currentWordIndex).join(' ')} {/* Revealing words one by one */}
               </h1>
               <p className="text-xl text-gray-500">
                 I'm Millyanne, a Full-Stack Developer creating seamless web applications. Based in Kenya, I combine creativity with technology to build innovative solutions.
               </p>
               <a
-                href="/projects"
+                href="/my-portfolio/#/projects"
                 className="inline-block mt-6 px-8 py-3 bg-[#A28DEC] hover:bg-[#9687E3] text-white rounded-full transition-all duration-300"
               >
                 See My Projects
