@@ -33,7 +33,14 @@ const testimonials = [
     author: 'Metrine Makana, Software Engineer | AWS Cloud Practitioner',
     link: 'https://www.linkedin.com/in/millyanne-wanjala-5365306b/details/recommendations/',
   },
-  // Add more testimonials if needed
+  {
+    id: 2,
+    quote: `It is with pleasure that I recommend Millyanne Wanjala, who worked at AmoebaX Ltd as a sales and customer success representative. 
+    Her patience, interpersonal skills, and dedication led to a promotion to sales and distribution manager. Millyanne has shown remarkable growth and 
+    commitment to achieving company goals, earning her a positive reputation among customers.`,
+    author: 'Grace Ngina, Former Manager at AmoebaX Ltd',
+  },
+  // Add more testimonials 
 ];
 
 const Experience = () => {
@@ -88,7 +95,7 @@ const Experience = () => {
               <p className="text-base text-gray-300">
                 <FaQuoteLeft className="mr-2 text-[#A28DEC]" /> "{testimonial.quote}"
               </p>
-              <p className="mt-4 text-lg font-semibold text-gray-400">
+              <p className="mt-4 text-lg font-bold text-gray-300">
                 - {testimonial.author}
                 <a
                   href={testimonial.link}
