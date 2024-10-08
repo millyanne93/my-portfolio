@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.deeace2f.css",
-    "main.js": "./static/js/main.d04174fe.js",
+    "main.css": "./static/css/main.1ad9af2c.css",
+    "main.js": "./static/js/main.e3d27112.js",
     "static/js/453.acca0757.chunk.js": "./static/js/453.acca0757.chunk.js",
     "static/media/profile-photo.jpg": "./static/media/profile-photo.7c04411ff513f9e520c1.jpg",
     "static/media/telethrive.png": "./static/media/telethrive.24ee246ce4cfd2c937ed.png",
@@ -10,12 +10,12 @@
     "static/media/trackr.png": "./static/media/trackr.6185f00ee63b2aba197b.png",
     "static/media/me.jpeg": "./static/media/me.4f7b66d142d0f8dd6752.jpeg",
     "index.html": "./index.html",
-    "main.deeace2f.css.map": "./static/css/main.deeace2f.css.map",
-    "main.d04174fe.js.map": "./static/js/main.d04174fe.js.map",
+    "main.1ad9af2c.css.map": "./static/css/main.1ad9af2c.css.map",
+    "main.e3d27112.js.map": "./static/js/main.e3d27112.js.map",
     "453.acca0757.chunk.js.map": "./static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.deeace2f.css",
-    "static/js/main.d04174fe.js"
+    "static/css/main.1ad9af2c.css",
+    "static/js/main.e3d27112.js"
   ]
 }
