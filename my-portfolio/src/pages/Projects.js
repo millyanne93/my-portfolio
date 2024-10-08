@@ -6,6 +6,7 @@ import { SiMongodb, SiFlask, SiTailwindcss, SiJavascript, SiBootstrap } from 're
 import trackrScreenshot from '../assets/images/trackr.png';
 import eduAdaptScreenshot from '../assets/images/eduadapt.png';
 import teleThriveScreenshot from '../assets/images/telethrive.png';
+import portfolioScreenshot from '../assets/images/Portfolio.png';
 
 // Icons for tech stack
 const techIcons = {
@@ -23,8 +24,8 @@ const techIcons = {
 };
 
 // ProjectCard component
-const ProjectCard = ({ title, description, techStack, githubLink, liveDemoLink, screenshot }) => (
-  <div className="p-6 rounded-lg border border-gray-900 hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+const ProjectCard = ({ title, description, techStack, githubLink, liveSiteLink, screenshot }) => (
+  <div className="p-6 rounded-lg border border-gray-900 transition-transform transform hover:scale-105 hover:shadow-lg duration-300 bg-white dark:bg-gray-800 shadow-lg">
     <img src={screenshot} alt={`${title} Screenshot`} className="w-full h-48 object-cover rounded-lg mb-4" />
     <h3 className="text-xl font-semibold text-black dark:text-white">{title}</h3>
     <p className="mt-2 text-black dark:text-gray-300">{description}</p>
@@ -36,8 +37,20 @@ const ProjectCard = ({ title, description, techStack, githubLink, liveDemoLink, 
       ))}
     </div>
     <div className="mt-6">
-      <a href={githubLink} className="bg-gradient-to-r from-purple-400 to-purple-600 text-white px-4 py-2 rounded-full mr-4 hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-700">GitHub</a>
-      {liveDemoLink && <a href={liveDemoLink} className="bg-gradient-to-r from-purple-400 to-purple-600 text-white px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-700">Live Demo</a>}
+      <a 
+        href={githubLink} 
+        className="bg-gradient-to-r from-purple-400 to-purple-600 text-white px-4 py-2 rounded-full mr-4 transition duration-300 hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-700"
+      >
+        GitHub
+      </a>
+      {liveSiteLink && (
+        <a 
+          href={liveSiteLink} 
+          className="bg-gradient-to-r from-purple-400 to-purple-600 text-white px-4 py-2 rounded-full transition duration-300 hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-700"
+        >
+          Check Live Site
+        </a>
+      )}
     </div>
   </div>
 );
@@ -45,17 +58,17 @@ const ProjectCard = ({ title, description, techStack, githubLink, liveDemoLink, 
 // Projects page
 const Projects = () => {
   return (
-    <section className="min-h-screen py-16 bg-custom-black">
+    <section id="projects" className="min-h-screen py-16 bg-gray-800">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold text-white dark:text-white">Recent Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+        <h2 className="text-3xl font-semibold text-white dark:text-white mb-8 cursor-pointer hover:text-[#A28DEC]">Recent Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Trackr project */}
           <ProjectCard
             title="Trackr"
             description="A web-based equipment tracking system."
             techStack="React, Node.js, MongoDB, Tailwind CSS"
             githubLink="https://github.com/millyanne93/trackr"
-            liveDemoLink="https://trackr-demo.com"
+            liveSiteLink="https://trackr-demo.com"
             screenshot={trackrScreenshot}
           />
           {/* EduAdapt project */}
@@ -73,6 +86,15 @@ const Projects = () => {
             techStack="Flask, HTML, CSS, JavaScript, Bootstrap"
             githubLink="https://github.com/ynot93/tele-thrive"
             screenshot={teleThriveScreenshot}
+          />
+          {/* Portfolio project */}
+          <ProjectCard
+            title="Portfolio"
+            description="Portfolio Website"
+            techStack="React, Tailwind CSS"
+            githubLink="https://github.com/millyanne93/my-portfolio"
+            liveSiteLink="https://millyanne93.github.io/my-portfolio/"
+            screenshot={portfolioScreenshot}
           />
         </div>
       </div>

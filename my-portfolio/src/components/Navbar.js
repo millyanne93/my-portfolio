@@ -1,59 +1,90 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa'; // Icon for the dropdown
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    // Get the saved preference from local storage or default to true
     const savedMode = localStorage.getItem('darkMode');
-    return savedMode === 'true'; // Convert string to boolean
+    return savedMode === 'true'; // Default to light mode
   });
 
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // For dropdown state
+
   useEffect(() => {
-    // Apply dark mode class based on the state
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
-      localStorage.setItem('darkMode', 'true'); // Save preference
+      localStorage.setItem('darkMode', 'true');
     } else {
       document.documentElement.classList.remove('dark');
-      localStorage.setItem('darkMode', 'false'); // Save preference
+      localStorage.setItem('darkMode', 'false');
     }
   }, [isDarkMode]);
 
   const toggleDarkMode = () => {
-    setIsDarkMode((prevMode) => !prevMode); // Toggle the mode
+    setIsDarkMode((prevMode) => !prevMode);
+  };
+
+  // Function for smooth scrolling to sections
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setIsDropdownOpen(false); // Close dropdown after click
+    }
   };
 
   return (
-    <nav className="bg-black p-4 shadow-md">
-      <div className="container mx-auto flex justify-center items-center">
-        <div className="flex space-x-4">
-          <Link
-            to={`${process.env.PUBLIC_URL}/`}
-            className="bg-white dark:bg-gray-800 text-[#A28DEC] dark:text-white py-2 px-4 rounded-full shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+    <nav className="bg-gray-800 p-4 shadow-md">
+      <div className="container mx-auto flex justify-end items-center">
+        {/* Dropdown toggle button */}
+        <div className="relative">
+          <button
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            className="text-white hover:text-gray-300 bg-gray-700 px-4 py-2 rounded-md"
           >
-            Home
-          </Link>
-          <Link
-            to={`${process.env.PUBLIC_URL}/about`}
-            className="bg-white dark:bg-gray-800 text-[#A28DEC] dark:text-white py-2 px-4 rounded-full shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
-          >
-            About
-          </Link>
-          <Link
-            to={`${process.env.PUBLIC_URL}/projects`}
-            className="bg-white dark:bg-gray-800 text-[#A28DEC] dark:text-white py-2 px-4 rounded-full shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
-          >
-            Projects
-          </Link>
-          <Link
-            to={`${process.env.PUBLIC_URL}/contact`}
-            className="bg-white dark:bg-gray-800 text-[#A28DEC] dark:text-white py-2 px-4 rounded-full shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
-          >
-            Contact
-          </Link>
-          <button onClick={toggleDarkMode} className="ml-4 text-white dark:text-gray-300">
-            {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+            <FaBars className="text-2xl" />
           </button>
+
+          {/* Dropdown menu */}
+          {isDropdownOpen && (
+            <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-700 shadow-lg rounded-md z-50">
+              <button
+                onClick={() => scrollToSection('home')}
+                className="block w-full text-left px-4 py-2 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600"
+              >
+                Home
+              </button>
+              <button
+                onClick={() => scrollToSection('about')}
+                className="block w-full text-left px-4 py-2 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600"
+              >
+                About
+              </button>
+              <button
+                onClick={() => scrollToSection('projects')}
+                className="block w-full text-left px-4 py-2 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600"
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => scrollToSection('experience')}
+                className="block w-full text-left px-4 py-2 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600"
+              >
+                Experience
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="block w-full text-left px-4 py-2 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600"
+              >
+                Contact
+              </button>
+              <button
+                onClick={toggleDarkMode}
+                className="block w-full text-left px-4 py-2 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600"
+              >
+                {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </nav>

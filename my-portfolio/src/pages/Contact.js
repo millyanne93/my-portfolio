@@ -3,10 +3,10 @@ import { FaLinkedin, FaTwitter, FaBriefcase, FaEnvelope, FaGithub } from 'react-
 
 const Contact = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-custom-black">
+    <section id="contact" className="min-h-screen flex flex-col items-center justify-center bg-gray-800">
       {/* Contact Form */}
       <form className="w-full max-w-lg p-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-900">
-        <h2 className="text-xl font-semibold text-black-700 dark:text-gray-300 mb-6">Have a Project in Mind? Let's Chat!</h2>
+        <h2 className="text-xl font-bold text-black-700 dark:text-gray-300 mb-6 cursor-pointer hover:text-[#A28DEC]">Have a Project in Mind? Let's Chat!</h2>
         <div className="mb-4">
           <label className="block text-sm font-semibold text-black-600 dark:text-gray-300" htmlFor="name">
             Name
@@ -54,7 +54,7 @@ const Contact = () => {
           href="https://www.linkedin.com/in/millyanne-wanjala-5365306b/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-gray-400"
+          className="text-white hover:text-purple-600"
         >
           <FaLinkedin size={30} />
         </a>
@@ -62,7 +62,7 @@ const Contact = () => {
           href="https://www.twitter.com/millyanne254"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-gray-400"
+          className="text-white hover:text-purple-600"
         >
           <FaTwitter size={30} />
         </a>
@@ -70,13 +70,13 @@ const Contact = () => {
           href="https://www.upwork.com/freelancers/~018f1d860f073c0488"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-gray-400"
+          className="text-white hover:text-purple-600"
         >
           <FaBriefcase size={30} />
         </a>
         <a
-          href="mailto:nimmyanne20@gmail.com"
-          className="text-white hover:text-gray-400"
+          href="mailto:nmillyanne20@gmail.com"
+          className="text-white hover:text-purple-600"
         >
           <FaEnvelope size={30} />
         </a>
@@ -85,7 +85,7 @@ const Contact = () => {
           href="https://github.com/millyanne93"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-gray-400"
+          className="text-white hover:text-purple-600"
         >
           <FaGithub size={30} />
         </a>
@@ -95,4 +95,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
