@@ -68,7 +68,7 @@ const Projects = () => {
             description="A web-based equipment tracking system."
             techStack="React, Node.js, MongoDB, Tailwind CSS"
             githubLink="https://github.com/millyanne93/trackr"
-            liveSiteLink="https://trackr-demo.com"
+            liveSiteLink="https://trackr-kd45.vercel.app/"
             screenshot={trackrScreenshot}
           />
           {/* EduAdapt project */}

@@ -33,7 +33,7 @@ const Home = () => {
                 {words.slice(0, currentWordIndex).join(' ')}
               </h1>
               <p className="text-xl text-gray-500">
-                I'm Millyanne, a Full-Stack Developer creating seamless web applications. Based in Kenya, I combine creativity with technology to build innovative solutions.
+                Hello there, I'm Millyanne, a Full-Stack Developer creating seamless web applications. Based in Kenya, I combine creativity with technology to build innovative solutions.
               </p>
               <a
                 href="#projects"
