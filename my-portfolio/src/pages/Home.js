@@ -49,7 +49,7 @@ const Home = () => {
         <section className="w-full mt-12">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center text-[#A28DEC] cursor-pointer hover:text-[#A28DEC]">What I Do:</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
 
               {/* Service Box Component */}
               {[
@@ -84,17 +84,19 @@ const Home = () => {
                   description: "I’ll help boost your online visibility and improve search engine rankings with effective SEO strategies.",
                 },
               ].map((service, index) => (
-                <div key={index} className="transition-transform transform hover:scale-105 p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 w-full h-48 flex flex-col justify-between">
-                  <div className="flex items-center mb-2">
-                    <span className="text-3xl mr-4">{service.icon}</span>
-                    <h3 className="text-xl font-bold text-black-700 dark:text-gray-300">{service.title}</h3>
+                <div
+                  key={index}
+                  className="transition-transform transform hover:scale-105 p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 w-full h-full flex flex-col items-center justify-center text-center"
+                >
+                  <div className="text-3xl mb-4">
+                    {service.icon}
                   </div>
+                  <h3 className="text-2xl font-semibold text-black-700 dark:text-gray-300 mb-2">{service.title}</h3>
                   <p className="text-base text-black-600 dark:text-gray-400 mt-1">
                     {service.description}
                   </p>
                 </div>
               ))}
-
             </div>
           </div>
         </section>
