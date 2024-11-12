@@ -40,7 +40,11 @@ const testimonials = [
     commitment to achieving company goals, earning her a positive reputation among customers.`,
     author: 'Grace Ngina, Former Manager at AmoebaX Ltd',
   },
-  // Add more testimonials 
+  {
+    id: 3,
+    quote: 'Millyanne is hardworking, reliable and she did so well taking care of our customer needs. A great team player who was always available for meetings and flexible on short notice. Very professional and highly recommended. We look forward to working with you again.',
+    author: 'Jackiya Tiliareng, HR Manager.',
+  },
 ];
 
 const Experience = () => {
@@ -103,7 +107,7 @@ const Experience = () => {
                   rel="noopener noreferrer"
                   className="text-[#A28DEC] hover:underline ml-2"
                 >
-                  (LinkedIn)
+                  (Link)
                 </a>
               </p>
             </div>

@@ -69,11 +69,6 @@ const Home = () => {
                   description: "Lets optimize your application deployment using CI/CD and cloud services.",
                 },
                 {
-                  icon: "📱",
-                  title: "Mobile App Development",
-                  description: "I’ll help you enhance your mobile presence with responsive applications built using React Native and Flutter.",
-                },
-                {
                   icon: "🎨",
                   title: "UI/UX Design",
                   description: "I craft intuitive, user-focused interfaces to improve the overall user experience.",
