@@ -7,6 +7,7 @@ import trackrScreenshot from '../assets/images/trackr.png';
 import eduAdaptScreenshot from '../assets/images/eduadapt.png';
 import teleThriveScreenshot from '../assets/images/telethrive.png';
 import portfolioScreenshot from '../assets/images/Portfolio.png';
+import planitScreenshot from '../assets/images/planit.png';
 
 // Icons for tech stack
 const techIcons = {
@@ -62,6 +63,14 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-semibold text-white dark:text-white mb-8 cursor-pointer hover:text-[#A28DEC]">Recent Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* PlanIt project */}
+          <ProjectCard
+            title="PlanIt"
+            description="Task management application."
+            techStack="React, Flask, MongoDB, Tailwind CSS"
+            githubLink="https://github.com/millyanne93/PlanIt"
+            screenshot={planitScreenshot}
+          />
           {/* Trackr project */}
           <ProjectCard
             title="Trackr"
