@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars } from 'react-icons/fa'; // Icon for the dropdown
+import logo from '../assets/images/mylogo.png'; // Import your logo file
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -34,7 +35,13 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-800 p-4 shadow-md">
-      <div className="container mx-auto flex justify-end items-center">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* Logo Section */}
+        <div className="flex items-center">
+          <img src={logo} alt="Logo" className="h-10 w-10 mr-2" />
+          <span className="text-xl text-white font-bold">My Portfolio</span>
+        </div>
+
         {/* Dropdown toggle button */}
         <div className="relative">
           <button
