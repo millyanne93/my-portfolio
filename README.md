@@ -14,5 +14,5 @@ Welcome to my personal portfolio! This website is a showcase of my work as a **F
 
 - **Frontend**: React, Tailwind CSS
 - **Version Control**: Git, GitHub
-- **Deployment**: (Netlify)
+- **Deployment**: (Github Pages)
 - **Design**: Responsive layout, modern design principles
