@@ -1,80 +1,117 @@
-import React, { useEffect, useState } from 'react';
-import { FaBriefcase, FaQuoteLeft } from 'react-icons/fa';
+import React, { useEffect, useState } from "react";
+import { FaQuoteLeft, FaStar } from "react-icons/fa";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-// Experience highlights data
-const experienceHighlights = [
+// Timeline Component
+const TimelineItem = ({ year, title, company, description }) => (
+  <div className="relative mb-8 flex items-start">
+    <div className="w-10 h-10 bg-purple-600 text-white flex items-center justify-center rounded-full font-bold text-lg">
+      {year}
+    </div>
+    <div className="ml-6 bg-gray-900 p-6 rounded-lg shadow-lg w-full">
+      <h3 className="text-xl font-bold text-white">{title}</h3>
+      <h4 className="text-md font-semibold text-purple-400">{company}</h4>
+      <p className="mt-2 text-gray-300">{description}</p>
+    </div>
+  </div>
+);
+
+// Experience Data
+const experienceTimeline = [
   {
-    id: 1,
-    title: 'Full-Stack Software Development',
-    description: 'As a full-stack developer, I have led the design and development of scalable web applications, ensuring optimal performance and delivering user-friendly interfaces.',
+    year: "2024",
+    title: "Freelance Full-Stack Developer",
+    company: "Self-Employed",
+    description:
+      "Developing and maintaining web applications for clients, focusing on modern frontend and backend technologies.",
   },
   {
-    id: 2,
-    title: 'Transition from Business to Tech',
-    description: 'Leveraging over 3 years of experience in business development and sales, I have seamlessly transitioned into software engineering, applying cross-disciplinary skills to build innovative solutions.',
+    year: "2023",
+    title: "Software Engineering Program",
+    company: "ALX Africa",
+    description:
+      "Completed an intensive software engineering program covering full-stack development, DevOps, and cloud computing.",
   },
   {
-    id: 3,
-    title: 'Mentorship and Team Collaboration',
-    description: 'I have provided mentorship and technical guidance, reviewing code for junior student developers and collaborating within teams to foster a culture of learning and improvement.',
-  },
-  {
-    id: 4,
-    title: 'Project Leadership & Agile Management',
-    description: 'As a project leader, I have managed end-to-end development cycles, utilizing Agile methodologies to ensure timely delivery, team collaboration, and continuous process improvement.',
+    year: "2020 - 2022",
+    title: "Sales & Business Development",
+    company: "AmoebaX Ltd",
+    description:
+      "Led sales initiatives and customer relations, leveraging technology to enhance operational efficiency.",
   },
 ];
 
-// Testimonial data (manual entry)
+// Testimonial Data
 const testimonials = [
   {
     id: 1,
-    quote: 'I had the pleasure of working with Millyanne during our software engineering program, and I was consistently impressed by her technical skills and excellent communication. She excels in problem-solving and can explain complex concepts in a clear, approachable way. Her ability to collaborate with both technical and non-technical team members makes her an outstanding team player. Driven, detail-oriented, and always eager to learn, Millyanne is sure to succeed in any software engineering role. I highly recommend her.',
-    author: 'Metrine Makana, Software Engineer | AWS Cloud Practitioner',
-    link: 'https://www.linkedin.com/in/millyanne-wanjala-5365306b/details/recommendations/',
+    quote:
+      "Millyanne is an outstanding developer with exceptional problem-solving skills. She collaborates well with teams and delivers high-quality work.",
+    author: "Metrine Makana",
+    role: "Software Engineer | AWS Cloud Practitioner",
+    rating: 5,
+    image: "https://via.placeholder.com/80", // Replace with actual image URL
   },
   {
     id: 2,
-    quote: `It is with pleasure that I recommend Millyanne Wanjala, who worked at AmoebaX Ltd as a sales and customer success representative. 
-    Her patience, interpersonal skills, and dedication led to a promotion to sales and distribution manager. Millyanne has shown remarkable growth and 
-    commitment to achieving company goals, earning her a positive reputation among customers.`,
-    author: 'Grace Ngina, Former Manager at AmoebaX Ltd',
+    quote:
+      "Her patience, interpersonal skills, and dedication led to a promotion to sales and distribution manager. Highly recommended!",
+    author: "Grace Ngina",
+    role: "Former Manager at AmoebaX Ltd",
+    rating: 4,
+    image: "https://via.placeholder.com/80",
   },
   {
     id: 3,
-    quote: 'Millyanne is hardworking, reliable and she did so well taking care of our customer needs. A great team player who was always available for meetings and flexible on short notice. Very professional and highly recommended. We look forward to working with you again.',
-    author: 'Jackiya Tiliareng, HR Manager.',
+    quote:
+      "Hardworking and reliable, she always prioritized customer satisfaction. A great team player and highly professional!",
+    author: "Jackiya Tiliareng",
+    role: "HR Manager",
+    rating: 5,
+    image: "https://via.placeholder.com/80",
   },
 ];
 
 const Experience = () => {
-  const [showTestimonials, setShowTestimonials] = useState(false);
+  const [showTimeline, setShowTimeline] = useState(false);
 
-  // This effect will trigger the testimonials to show with an animation
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowTestimonials(true);
-    }, 300); // delay for a nice effect
+      setShowTimeline(true);
+    }, 300);
     return () => clearTimeout(timer);
   }, []);
+
+  // Slick Slider Settings for Testimonials
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
 
   return (
     <section id="experience" className="min-h-screen py-12 bg-gray-800">
       <div className="max-w-6xl mx-auto px-4">
-        {/* Experience Highlights Section */}
+        {/* Experience Timeline */}
         <h2 className="text-3xl font-bold text-white mb-6 cursor-pointer hover:text-[#A28DEC]">
-          Experience Highlights
+          Experience Timeline
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {experienceHighlights.map((experience) => (
+        <div className="border-l-4 border-purple-500 pl-4">
+          {experienceTimeline.map((exp, index) => (
             <div
-              key={experience.id}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
+              key={index}
+              className={`transition-all duration-700 ease-in-out ${
+                showTimeline ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white flex items-center">
-                <FaBriefcase className="mr-2 text-[#A28DEC]" /> {experience.title}
-              </h3>
-              <p className="mt-2 text-gray-700 dark:text-gray-300">{experience.description}</p>
+              <TimelineItem {...exp} />
             </div>
           ))}
         </div>
@@ -83,35 +120,32 @@ const Experience = () => {
         <h2 className="text-3xl font-bold text-white mt-12 mb-6 cursor-pointer hover:text-[#A28DEC]">
           Testimonials
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className={`bg-gray-700 dark:bg-gray-900 p-6 rounded-lg shadow-lg transition-transform duration-500 ease-in-out ${
-                showTestimonials ? 'translate-x-0 opacity-100' : 'translate-x-[-100%] opacity-0'
-              }`}
-              style={{
-                transition: 'transform 0.5s, opacity 0.5s',
-                transform: showTestimonials ? 'translateX(0)' : 'translateX(-100%)',
-                opacity: showTestimonials ? 1 : 0,
-              }}
-            >
-              <p className="text-base text-gray-300">
-                <FaQuoteLeft className="mr-2 text-[#A28DEC]" /> "{testimonial.quote}"
-              </p>
-              <p className="mt-4 text-lg font-bold text-gray-300">
-                - {testimonial.author}
-                <a
-                  href={testimonial.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#A28DEC] hover:underline ml-2"
-                >
-                  (Link)
-                </a>
-              </p>
-            </div>
-          ))}
+        <div className="bg-gray-900 p-6 rounded-lg shadow-lg">
+          <Slider {...sliderSettings}>
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className="text-center p-6">
+                <FaQuoteLeft className="text-4xl text-purple-500 mx-auto mb-4" />
+                <p className="text-gray-300 text-lg mb-4">"{testimonial.quote}"</p>
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.author}
+                  className="w-20 h-20 rounded-full mx-auto mb-2"
+                />
+                <h4 className="text-white font-bold">{testimonial.author}</h4>
+                <p className="text-purple-400">{testimonial.role}</p>
+                <div className="flex justify-center mt-2">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <FaStar
+                      key={i}
+                      className={`text-yellow-400 ${
+                        i < testimonial.rating ? "opacity-100" : "opacity-50"
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
     </section>

@@ -39,7 +39,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-10 w-10 mr-2" />
-          <span className="text-xl text-white font-bold">My Portfolio</span>
+          <span className="text-xl text-white font-bold">Millyanne Wanjala</span>
         </div>
 
         {/* Dropdown toggle button */}
