@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Code, Database, PenTool, ServerCog } from "lucide-react"; // Import icons
+import { Code, Database, PenTool, ServerCog } from "lucide-react"; // Icons for services
+import { FaLinkedin, FaTwitter, FaBriefcase, FaEnvelope, FaGithub } from "react-icons/fa"; // Social media icons
 import profilePhoto from "../assets/images/profile-photo.jpg";
 
 const Home = () => {
@@ -60,6 +61,50 @@ const Home = () => {
               Based in Kenya, I combine creativity with technology to build innovative solutions
               that help businesses thrive in the digital landscape.
             </p>
+
+            {/* Social Media Links */}
+            <div className="mt-6 flex justify-center md:justify-start space-x-6">
+              <a
+                href="https://www.linkedin.com/in/millyanne-wanjala-5365306b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-purple-600 transition"
+              >
+                <FaLinkedin size={30} />
+              </a>
+              <a
+                href="https://www.twitter.com/millyanne254"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-purple-600 transition"
+              >
+                <FaTwitter size={30} />
+              </a>
+              <a
+                href="https://www.upwork.com/freelancers/~018f1d860f073c0488"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-purple-600 transition"
+              >
+                <FaBriefcase size={30} />
+              </a>
+              <a
+                href="mailto:nmillyanne20@gmail.com"
+                className="text-white hover:text-purple-600 transition"
+              >
+                <FaEnvelope size={30} />
+              </a>
+              <a
+                href="https://github.com/millyanne93"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-purple-600 transition"
+              >
+                <FaGithub size={30} />
+              </a>
+            </div>
+
+            {/* Call-to-Action Buttons */}
             <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
               <a
                 href="#projects"

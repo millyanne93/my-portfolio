@@ -4,6 +4,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// Import local images for testimonials
+import metrineImage from "../assets/images/metrine.jpg";
+import graceImage from "../assets/images/grace.jpg";
+import jackiyaImage from "../assets/images/jackiya.jpg";
+
 // Timeline Component
 const TimelineItem = ({ year, title, company, description }) => (
   <div className="relative mb-8 flex items-start">
@@ -22,8 +27,8 @@ const TimelineItem = ({ year, title, company, description }) => (
 const experienceTimeline = [
   {
     year: "2024",
-    title: "Freelance Full-Stack Developer",
-    company: "Self-Employed",
+    title: "Full-Stack Developer",
+    company: "Freelance",
     description:
       "Developing and maintaining web applications for clients, focusing on modern frontend and backend technologies.",
   },
@@ -35,7 +40,14 @@ const experienceTimeline = [
       "Completed an intensive software engineering program covering full-stack development, DevOps, and cloud computing.",
   },
   {
-    year: "2020 - 2022",
+    year: "2021 - 2023",
+    title: "Gen AI Data Labeling",
+    company: "Clickworker/Remotasks",
+    description:
+      "Annotated and labeled data to train AI models for media relevance, search optimization, and text analysis, ensuring high-quality datasets for machine learning applications.",
+  },
+  {
+    year: "2018-2021",
     title: "Sales & Business Development",
     company: "AmoebaX Ltd",
     description:
@@ -43,7 +55,7 @@ const experienceTimeline = [
   },
 ];
 
-// Testimonial Data
+// Testimonial Data (Now using local images)
 const testimonials = [
   {
     id: 1,
@@ -52,7 +64,7 @@ const testimonials = [
     author: "Metrine Makana",
     role: "Software Engineer | AWS Cloud Practitioner",
     rating: 5,
-    image: "https://via.placeholder.com/80", // Replace with actual image URL
+    image: metrineImage,
   },
   {
     id: 2,
@@ -61,16 +73,16 @@ const testimonials = [
     author: "Grace Ngina",
     role: "Former Manager at AmoebaX Ltd",
     rating: 4,
-    image: "https://via.placeholder.com/80",
+    image: graceImage,
   },
   {
     id: 3,
     quote:
       "Hardworking and reliable, she always prioritized customer satisfaction. A great team player and highly professional!",
     author: "Jackiya Tiliareng",
-    role: "HR Manager",
+    role: "Customer Service | Travel Consultant | Business Development",
     rating: 5,
-    image: "https://via.placeholder.com/80",
+    image: jackiyaImage,
   },
 ];
 
