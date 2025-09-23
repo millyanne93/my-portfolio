@@ -50,7 +50,7 @@ const About = () => {
   return (
     <section id="about" className="min-h-screen py-12 bg-gray-800 flex flex-col justify-center">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-        
+
         {/* Left Column: About Info & Skills */}
         <div className="flex flex-col">
           <div
@@ -65,10 +65,12 @@ const About = () => {
               <FaUser className="mr-2 text-[#A28DEC]" /> About Me
             </h3>
             <p className="text-white">
-              I’m a results-driven Full-Stack Developer with a strong foundation in software engineering 
-  and a background in business development. I specialize in building <strong>scalable web applications</strong>, 
-  optimizing <strong>DevOps workflows</strong>, and leveraging <strong>AI-powered solutions</strong>. My ability to merge 
-  technical expertise with <strong>strategic problem-solving</strong> allows me to deliver high-quality digital products.
+              I'm a results-driven Full-Stack Developer with a strong foundation in software engineering
+              and a background in business development. I specialize in building <strong>scalable web applications</strong>,
+              optimizing <strong>DevOps workflows</strong>, and leveraging <strong>AI-powered solutions</strong>. My expertise 
+              spans from <strong>cloud infrastructure automation</strong> with AWS, Terraform, and Kubernetes to 
+              <strong>container orchestration</strong> and <strong>CI/CD pipeline management</strong>. My ability to merge
+              technical expertise with <strong>strategic problem-solving</strong> allows me to deliver high-quality digital products.
             </p>
           </div>
 
@@ -94,32 +96,57 @@ const About = () => {
             {activeTab === "background" && (
               <div className="text-white">
                 <p>
-                  With experience in <strong>full-stack development, DevOps automation, and cloud services</strong>, 
-                  I have contributed to <strong>building intelligent applications</strong> that bridge the gap between 
-                  business and technology. I thrive in collaborative environments and continuously seek to 
-                  innovate through code.
+                  With experience in <strong>full-stack development, DevOps automation, and cloud services</strong>,
+                  I have contributed to <strong>building intelligent applications</strong> that bridge the gap between
+                  business and technology. My expertise includes <strong>Infrastructure as Code (IaC) with Terraform</strong>,
+                  <strong>container orchestration with Kubernetes and Docker</strong>, and <strong>cloud-native 
+                  application deployment on AWS EKS</strong>. I thrive in collaborative environments and continuously 
+                  seek to innovate through code while maintaining robust, scalable infrastructure.
                 </p>
               </div>
             )}
 
             {activeTab === "skills" && (
-              <div>
-                <SkillBar skill="React" percentage={90} color="#61dafb" />
-                <SkillBar skill="Node.js" percentage={85} color="#3c873a" />
-                <SkillBar skill="Python" percentage={80} color="#fdd835" />
-                <SkillBar skill="Django & Flask" percentage={80} color="#092E20" />
-                <SkillBar skill="MongoDB & MySQL" percentage={80} color="#4DB33D" />
-                <SkillBar skill="DevOps (Docker, CI/CD, GitHub Actions)" percentage={85} color="#0db7ed" />
-                <SkillBar skill="AI Data Labeling & Analysis" percentage={70} color="#A28DEC" />
+              <div className="max-h-96 overflow-y-auto pr-2">
+                {/* Frontend & Backend */}
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-purple-400 mb-3">Frontend & Backend</h4>
+                  <SkillBar skill="React & JavaScript" percentage={90} color="#61dafb" />
+                  <SkillBar skill="Node.js & Express" percentage={85} color="#3c873a" />
+                  <SkillBar skill="Python" percentage={80} color="#fdd835" />
+                  <SkillBar skill="Django & Flask" percentage={80} color="#092E20" />
+                  <SkillBar skill="MongoDB & MySQL" percentage={80} color="#4DB33D" />
+                </div>
+
+                {/* DevOps & Cloud */}
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-orange-400 mb-3">DevOps & Cloud Infrastructure</h4>
+                  <SkillBar skill="AWS (EC2, S3, RDS, EKS)" percentage={75} color="#FF9900" />
+                  <SkillBar skill="Terraform (Infrastructure as Code)" percentage={80} color="#7B42BC" />
+                  <SkillBar skill="Kubernetes & Docker" percentage={85} color="#326CE5" />
+                  <SkillBar skill="Helm Charts & Package Management" percentage={75} color="#0F1689" />
+                  <SkillBar skill="CI/CD (GitHub Actions, Jenkins)" percentage={85} color="#2088FF" />
+                  <SkillBar skill="Container Registry & Image Management" percentage={80} color="#0db7ed" />
+                </div>
+
+                {/* Additional Skills */}
+                <div>
+                  <h4 className="text-lg font-semibold text-green-400 mb-3">Specialized Skills</h4>
+                  <SkillBar skill="AI Data Labeling & Analysis" percentage={70} color="#A28DEC" />
+                  <SkillBar skill="Linux System Administration" percentage={75} color="#FCC624" />
+                  <SkillBar skill="Git Version Control & Collaboration" percentage={90} color="#F05032" />
+                </div>
               </div>
             )}
 
             {activeTab === "education" && (
               <div className="text-white">
-                <p>📌 <strong>Bachelor's in Information Science</strong> - Maasai Mara University (2012 - 2016)</p>
-                <p>📌 <strong>Software Engineering</strong> - ALX Africa (2023 - 2024)</p>
-                <p>📌 <strong>Fundamentals of Project Management</strong> - Coursera (2022)</p>
-                <p>📌 <strong>AWS Cloud Practitioner Certification (In Progress)</strong></p>
+                <p className="mb-2">📌 <strong>Bachelor's in Information Science</strong> - Maasai Mara University (2012 - 2016)</p>
+                <p className="mb-2">📌 <strong>Software Engineering</strong> - ALX Africa (2023 - 2024)</p>
+                <p className="mb-2">📌 <strong>Fundamentals of Project Management</strong> - Coursera (2022)</p>
+                <p className="mb-2">📌 <strong>AWS Cloud Practitioner Certification</strong> (April 2025)</p>
+                <p className="mb-2">📌 <strong>Kubernetes Administrator (CKA)</strong> (Planned 2025)</p>
+                <p>📌 <strong>Terraform Associate Certification</strong> (Planned 2025)</p>
               </div>
             )}
           </div>
@@ -139,24 +166,49 @@ const About = () => {
             <div className="border-l-4 border-purple-500 pl-4 space-y-4">
               <div>
                 <h4 className="text-white font-semibold">2024 - Present</h4>
-                <p className="text-gray-400">Full-Stack Developer</p>
+                <p className="text-gray-400">Full-Stack Developer & DevOps Engineer</p>
+                <p className="text-gray-500 text-sm">Cloud infrastructure, Kubernetes, CI/CD automation</p>
               </div>
               <div>
                 <h4 className="text-white font-semibold">2023 - 2024</h4>
                 <p className="text-gray-400">Software Engineering at ALX Africa</p>
+                <p className="text-gray-500 text-sm">Full-stack development, system design, algorithms</p>
               </div>
               <div>
                 <h4 className="text-white font-semibold">2021-2023</h4>
                 <p className="text-gray-400">Gen AI Data Labeling - Clickworker / Remotasks</p>
+                <p className="text-gray-500 text-sm">AI model training, data analysis, quality assurance</p>
               </div>
               <div>
                 <h4 className="text-white font-semibold">2018 - 2021</h4>
                 <p className="text-gray-400">Business Development/Sales at AmoebaX Ltd</p>
+                <p className="text-gray-500 text-sm">Strategic partnerships, client relations, growth strategy</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Custom Scrollbar Styles */}
+      <style jsx>{`
+        .max-h-96::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        .max-h-96::-webkit-scrollbar-track {
+          background: #374151;
+          border-radius: 3px;
+        }
+
+        .max-h-96::-webkit-scrollbar-thumb {
+          background: #6B7280;
+          border-radius: 3px;
+        }
+
+        .max-h-96::-webkit-scrollbar-thumb:hover {
+          background: #9CA3AF;
+        }
+      `}</style>
     </section>
   );
 };
