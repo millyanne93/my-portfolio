@@ -34,12 +34,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-4 shadow-md">
+    <nav className="bg-gray-200 dark:bg-gray-800 p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Section */}
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-10 w-10 mr-2" />
-          <span className="text-xl text-white font-bold">Millyanne Wanjala</span>
+          <span className="text-xl text-purple-800 font-bold">My Portfolio</span>
         </div>
 
         {/* Dropdown toggle button */}

@@ -6,10 +6,10 @@ import profilePhoto from "../assets/images/me.jpeg";
 const SkillBar = ({ skill, percentage, color }) => (
   <div className="mb-4">
     <div className="flex justify-between mb-1">
-      <span className="text-white">{skill}</span>
-      <span className="text-white">{percentage}%</span>
+      <span className="text-gray-900 dark:text-white">{skill}</span>
+      <span className="text-gray-900 dark:text-white">{percentage}%</span>
     </div>
-    <div className="w-full bg-gray-700 rounded-full h-2.5">
+    <div className="w-full bg-gray-300 dark:w-full bg-gray-700 rounded-full h-2.5">
       <div
         className="h-2.5 rounded-full transition-all duration-1000"
         style={{ width: `${percentage}%`, backgroundColor: color }}
@@ -48,7 +48,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="min-h-screen py-12 bg-gray-800 flex flex-col justify-center">
+    <section id="about" className="min-h-screen py-12 bg-white dark:bg-gray-800 flex flex-col justify-center">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
 
         {/* Left Column: About Info & Skills */}
@@ -61,10 +61,10 @@ const About = () => {
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            <h3 className="text-2xl font-bold text-white flex items-center mb-4 cursor-pointer hover:text-[#A28DEC]">
-              <FaUser className="mr-2 text-[#A28DEC]" /> About Me
+            <h3 className="text-2xl font-bold text-purple-700 dark:text-purple-700 flex items-center mb-4 cursor-pointer hover:text-[#A28DEC]">
+              <FaUser className="mr-2 text-purple-700" /> About Me
             </h3>
-            <p className="text-white">
+            <p className="text-gray-700 dark:text-white">
               I'm a results-driven Full-Stack Developer with a strong foundation in software engineering
               and a background in business development. I specialize in building <strong>scalable web applications</strong>,
               optimizing <strong>DevOps workflows</strong>, and leveraging <strong>AI-powered solutions</strong>. My expertise 
@@ -83,8 +83,8 @@ const About = () => {
                   onClick={() => setActiveTab(tab)}
                   className={`px-4 py-2 rounded-md transition ${
                     activeTab === tab
-                      ? "bg-purple-600 text-white"
-                      : "bg-gray-700 text-white hover:bg-purple-500"
+                      ? "bg-purple-300 dark:bg-purple-700 text-gray-900 dark:text-white"
+                      : "bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-purple-500"
                   }`}
                 >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -94,7 +94,7 @@ const About = () => {
 
             {/* Tab Content */}
             {activeTab === "background" && (
-              <div className="text-white">
+              <div className="text-gray-700 dark:text-white">
                 <p>
                   With experience in <strong>full-stack development, DevOps automation, and cloud services</strong>,
                   I have contributed to <strong>building intelligent applications</strong> that bridge the gap between
@@ -140,7 +140,7 @@ const About = () => {
             )}
 
             {activeTab === "education" && (
-              <div className="text-white">
+              <div className="text-gray-700 dark:text-white">
                 <p className="mb-2">📌 <strong>Bachelor's in Information Science</strong> - Maasai Mara University (2012 - 2016)</p>
                 <p className="mb-2">📌 <strong>Software Engineering</strong> - ALX Africa (2023 - 2024)</p>
                 <p className="mb-2">📌 <strong>Fundamentals of Project Management</strong> - Coursera (2022)</p>
@@ -162,25 +162,25 @@ const About = () => {
 
           {/* Timeline Section */}
           <div className="mt-8 w-full">
-            <h3 className="text-2xl font-bold text-white mb-4">Professional Journey</h3>
+            <h3 className="text-2xl font-bold text-purple-700 dark:text-purple-700 mb-4">Professional Journey</h3>
             <div className="border-l-4 border-purple-500 pl-4 space-y-4">
               <div>
-                <h4 className="text-white font-semibold">2024 - Present</h4>
+                <h4 className="text-gray-700 dark:text-white font-semibold">2024 - Present</h4>
                 <p className="text-gray-400">Full-Stack Developer & DevOps Engineer</p>
                 <p className="text-gray-500 text-sm">Cloud infrastructure, Kubernetes, CI/CD automation</p>
               </div>
               <div>
-                <h4 className="text-white font-semibold">2023 - 2024</h4>
+                <h4 className="text-gray-700 dark:text-white font-semibold">2023 - 2024</h4>
                 <p className="text-gray-400">Software Engineering at ALX Africa</p>
                 <p className="text-gray-500 text-sm">Full-stack development, system design, algorithms</p>
               </div>
               <div>
-                <h4 className="text-white font-semibold">2021-2023</h4>
+                <h4 className="text-gray-700 dark:text-white font-semibold">2021-2023</h4>
                 <p className="text-gray-400">Gen AI Data Labeling - Clickworker / Remotasks</p>
                 <p className="text-gray-500 text-sm">AI model training, data analysis, quality assurance</p>
               </div>
               <div>
-                <h4 className="text-white font-semibold">2018 - 2021</h4>
+                <h4 className="text-gray-700 dark:text-white font-semibold">2018 - 2021</h4>
                 <p className="text-gray-400">Business Development/Sales at AmoebaX Ltd</p>
                 <p className="text-gray-500 text-sm">Strategic partnerships, client relations, growth strategy</p>
               </div>

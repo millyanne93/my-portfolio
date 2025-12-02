@@ -122,10 +122,10 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="min-h-screen py-16 bg-gray-800">
+    <section id="projects" className="min-h-screen py-16 bg-white dark:bg-gray-800">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-white mb-6">My Projects</h2>
-        <p className="text-xl text-gray-400 text-center mb-12 max-w-3xl mx-auto">
+        <h2 className="text-4xl font-bold text-center text-purple-700 dark:text-purple-700 mb-6">My Projects</h2>
+        <p className="text-xl text-gray-600 dark:text-xl text-gray-700 text-center mb-12 max-w-3xl mx-auto">
           Explore my recent work and see how I've helped clients transform ideas into reality.
         </p>
 
@@ -138,7 +138,7 @@ const Projects = () => {
               className={`filter-btn px-6 py-2 rounded-md transition-all duration-300 transform hover:scale-105 ${
                 filter === category
                   ? "bg-purple-600 text-white shadow-lg shadow-purple-500/30"
-                  : "text-white hover:text-gray-300 hover:bg-gray-700"
+                  : "text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700"
               }`}
             >
               {category}
@@ -164,7 +164,7 @@ const Projects = () => {
               >
                 <div className="flip-card-inner transition-transform duration-700">
                   {/* Front Side with Hover Effects */}
-                  <div className="flip-card-front bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                  <div className="flip-card-front bg-gray-50 dark:bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col items-center">
                     <div className="relative w-full h-48 mb-4 overflow-hidden rounded-lg group">
                       <img
                         src={project.screenshot}
@@ -190,7 +190,7 @@ const Projects = () => {
                   </div>
 
                   {/* Back Side with Enhanced Design */}
-                  <div className="flip-card-back bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-between relative">
+                  <div className="flip-card-back bg-gray-50 dark:bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-between relative">
                     <div>
                       <h3 className="text-xl font-semibold text-white text-center mb-2">{project.title}</h3>
                       <p className="text-gray-400 text-center mb-4 text-sm leading-relaxed">{project.description}</p>

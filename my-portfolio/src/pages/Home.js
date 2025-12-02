@@ -37,7 +37,7 @@ const Home = () => {
   }, [charIndex, isDeleting, phraseIndex, phrases]);
 
   return (
-    <div className="bg-gray-800 text-white min-h-screen">
+    <div className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white min-h-screen">
       {/* Hero Section with Profile Photo */}
       <section id="home" className="relative flex items-center justify-center min-h-screen px-6">
         <div className="relative z-10 w-full max-w-6xl flex flex-col md:flex-row items-center">
@@ -52,11 +52,11 @@ const Home = () => {
 
           {/* Hero Text */}
           <div className="md:w-2/3 text-center md:text-left">
-            <h1 className="text-5xl font-bold text-[#A28DEC] mb-4">
+            <h1 className="text-5xl font-bold text-purple-700 mb-4">
               {text}
               <span className="border-r-2 border-purple-500 animate-blink">&nbsp;</span>
             </h1>
-            <p className="text-xl text-gray-400 leading-relaxed">
+            <p className="text-xl text-gray-800 dark:text-gray-100 leading-relaxed">
               Hello there, I'm Millyanne, a Full-Stack Developer creating seamless web applications.
               Based in Kenya, I combine creativity with technology to build innovative solutions
               that help businesses thrive in the digital landscape.
@@ -68,7 +68,7 @@ const Home = () => {
                 href="https://www.linkedin.com/in/millyanne-wanjala-5365306b/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-purple-600 transition"
+                className="text-gray-800 dark:text-white hover:text-purple-600 transition"
               >
                 <FaLinkedin size={30} />
               </a>
@@ -76,7 +76,7 @@ const Home = () => {
                 href="https://www.twitter.com/millyanne254"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-purple-600 transition"
+                className="text-gray-800 dark:text-white hover:text-purple-600 transition"
               >
                 <FaTwitter size={30} />
               </a>
@@ -84,13 +84,13 @@ const Home = () => {
                 href="https://www.upwork.com/freelancers/~018f1d860f073c0488"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-purple-600 transition"
+                className="text-gray-800 dark:text-white hover:text-purple-600 transition"
               >
                 <FaBriefcase size={30} />
               </a>
               <a
                 href="mailto:nmillyanne20@gmail.com"
-                className="text-white hover:text-purple-600 transition"
+                className="text-gray-800 dark:text-white hover:text-purple-600 transition"
               >
                 <FaEnvelope size={30} />
               </a>
@@ -98,7 +98,7 @@ const Home = () => {
                 href="https://github.com/millyanne93"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-purple-600 transition"
+                className="text-gray-800 dark:text-white hover:text-purple-600 transition"
               >
                 <FaGithub size={30} />
               </a>
@@ -124,9 +124,9 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-[#A28DEC] mb-12">My Services</h2>
+          <h2 className="text-4xl font-bold text-purple-700 mb-12">My Services</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Web Development */}
@@ -170,12 +170,12 @@ const Home = () => {
 // Service Card Component with Icons
 const ServiceCard = ({ icon: Icon, title, description, features }) => {
   return (
-    <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg p-8 transition-transform transform hover:-translate-y-3 hover:shadow-purple-500/50">
+    <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg p-8 transition-transform transform hover:-translate-y-3 hover:shadow-purple-500/50">
       <div className="flex justify-center items-center w-16 h-16 bg-purple-700 rounded-full mb-6">
         <Icon className="w-10 h-10 text-white" />
       </div>
-      <h3 className="text-2xl font-semibold text-white mb-4">{title}</h3>
-      <p className="text-gray-400 mb-6">{description}</p>
+      <h3 className="text-2xl font-semibold text-purple-900 dark:text-white mb-4">{title}</h3>
+      <p className="text-gray-700 dark:text-gray-400 mb-6">{description}</p>
       <ul className="space-y-3 text-gray-400">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">

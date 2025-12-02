@@ -12,13 +12,13 @@ import jackiyaImage from "../assets/images/jackiya.jpg";
 // Timeline Component
 const TimelineItem = ({ year, title, company, description }) => (
   <div className="relative mb-8 flex items-start">
-    <div className="w-10 h-10 bg-purple-600 text-white flex items-center justify-center rounded-full font-bold text-lg">
+    <div className="w-10 h-10 bg-purple-600 text-gray-800 dark:text-white flex items-center justify-center rounded-full font-bold text-lg">
       {year}
     </div>
-    <div className="ml-6 bg-gray-900 p-6 rounded-lg shadow-lg w-full">
-      <h3 className="text-xl font-bold text-white">{title}</h3>
-      <h4 className="text-md font-semibold text-purple-400">{company}</h4>
-      <p className="mt-2 text-gray-300">{description}</p>
+    <div className="ml-6 bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-lg w-full">
+      <h3 className="text-xl font-bold text-gray-800 dark:text-white">{title}</h3>
+      <h4 className="text-md font-semibold text-purple-600">{company}</h4>
+      <p className="mt-2 text-gray-600">{description}</p>
     </div>
   </div>
 );
@@ -108,10 +108,10 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="min-h-screen py-12 bg-gray-800">
+    <section id="experience" className="min-h-screen py-12 bg-white dark:bg-gray-800">
       <div className="max-w-6xl mx-auto px-4">
         {/* Experience Timeline */}
-        <h2 className="text-3xl font-bold text-white mb-6 cursor-pointer hover:text-[#A28DEC]">
+        <h2 className="text-3xl font-bold text-purple-700 dark:text-purple-700 mb-6 cursor-pointer hover:text-purple-500">
           Experience Timeline
         </h2>
         <div className="border-l-4 border-purple-500 pl-4">
@@ -129,22 +129,22 @@ const Experience = () => {
         </div>
 
         {/* Testimonial Section */}
-        <h2 className="text-3xl font-bold text-white mt-12 mb-6 cursor-pointer hover:text-[#A28DEC]">
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6 cursor-pointer hover:text-purple-700">
           Testimonials
         </h2>
-        <div className="bg-gray-900 p-6 rounded-lg shadow-lg">
+        <div className="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-lg">
           <Slider {...sliderSettings}>
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="text-center p-6">
-                <FaQuoteLeft className="text-4xl text-purple-500 mx-auto mb-4" />
-                <p className="text-gray-300 text-lg mb-4">"{testimonial.quote}"</p>
+                <FaQuoteLeft className="text-4xl text-purple-600 mx-auto mb-4" />
+                <p className="text-gray-600 text-lg mb-4">"{testimonial.quote}"</p>
                 <img
                   src={testimonial.image}
                   alt={testimonial.author}
                   className="w-20 h-20 rounded-full mx-auto mb-2"
                 />
-                <h4 className="text-white font-bold">{testimonial.author}</h4>
-                <p className="text-purple-400">{testimonial.role}</p>
+                <h4 className="text-gray-800 dark:text-white font-bold">{testimonial.author}</h4>
+                <p className="text-purple-600">{testimonial.role}</p>
                 <div className="flex justify-center mt-2">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <FaStar
