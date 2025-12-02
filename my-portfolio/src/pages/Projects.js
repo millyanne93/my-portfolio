@@ -7,6 +7,7 @@ import eduAdaptScreenshot from "../assets/images/eduadapt.png";
 import teleThriveScreenshot from "../assets/images/telethrive.png";
 import portfolioScreenshot from "../assets/images/Portfolio.png";
 import planitScreenshot from "../assets/images/planit.png";
+import hopefulDestinyScreenshot from "../assets/images/hopeful-destiny.png";
 
 // Icons for tech stack
 const techIcons = {
@@ -43,6 +44,16 @@ const projectData = [
     screenshot: trackrScreenshot,
     category: "Full Stack",
     featured: true,
+  },
+  {
+    title: "Hopeful Destiny CBO",
+    description: "A community-based organization website promoting youth empowerment and community development initiatives.",
+    techStack: ["React", "Tailwind CSS"],
+    githubLink: "https://github.com/millyanne93/hopeful-destiny-cbo", // Update with your actual repo
+    liveSiteLink: "https://hopeful-destiny-cbo.vercel.app/", // Update with your actual live site
+    screenshot: hopefulDestinyScreenshot,
+    category: "Web Development",
+    featured: false,
   },
   {
     title: "PlanIt",
