@@ -49,8 +49,8 @@ const projectData = [
     title: "Hopeful Destiny CBO",
     description: "A community-based organization website promoting youth empowerment and community development initiatives.",
     techStack: ["React", "Tailwind CSS"],
-    githubLink: "https://github.com/millyanne93/hopeful-destiny-cbo", // Update with your actual repo
-    liveSiteLink: "https://hopeful-destiny-cbo.vercel.app/", // Update with your actual live site
+    githubLink: "https://github.com/millyanne93/Hopeful-Destiny",
+    liveSiteLink: "https://hopefuldestiny.org/",
     screenshot: hopefulDestinyScreenshot,
     category: "Web Development",
     featured: false,
