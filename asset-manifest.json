@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "./static/css/main.ae1e33dc.css",
-    "main.js": "./static/js/main.34ce8e10.js",
+    "main.js": "./static/js/main.6f1db549.js",
     "static/js/453.acca0757.chunk.js": "./static/js/453.acca0757.chunk.js",
+    "static/media/hopeful-destiny.png": "./static/media/hopeful-destiny.8c7fd934ae103bc1b65c.png",
     "static/media/planit.png": "./static/media/planit.546b063deb13bdfb9c63.png",
     "static/media/trackr.png": "./static/media/trackr.c052442cefa7da810dd2.png",
     "static/media/profile-photo.jpg": "./static/media/profile-photo.7c04411ff513f9e520c1.jpg",
@@ -20,11 +21,11 @@
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
     "main.ae1e33dc.css.map": "./static/css/main.ae1e33dc.css.map",
-    "main.34ce8e10.js.map": "./static/js/main.34ce8e10.js.map",
+    "main.6f1db549.js.map": "./static/js/main.6f1db549.js.map",
     "453.acca0757.chunk.js.map": "./static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ae1e33dc.css",
-    "static/js/main.34ce8e10.js"
+    "static/js/main.6f1db549.js"
   ]
 }
