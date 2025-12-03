@@ -5,7 +5,10 @@ import logo from '../assets/images/mylogo.png'; // Import your logo file
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedMode = localStorage.getItem('darkMode');
-    return savedMode === 'true'; // Default to light mode
+    if (savedMode !== null) {
+      return savedMode === 'true'; // Default to light mode
+    }
+    return true;
   });
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // For dropdown state
