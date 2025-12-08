@@ -179,7 +179,7 @@ const Projects = () => {
                         <span className="text-white font-medium bg-purple-600 px-4 py-2 rounded-md">View Details</span>
                       </div>
                     </div>
-                    <h3 className="text-xl font-semibold text-white text-center">{project.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white text-center">{project.title}</h3>
 
                     {/* Featured Badge */}
                     {project.featured && (
