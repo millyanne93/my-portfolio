@@ -83,19 +83,19 @@ const Contact = () => {
 
       {/* Social Media Icons */}
       <div className="mt-8 flex space-x-6">
-        <a href="https://www.linkedin.com/in/millyanne-wanjala-5365306b/" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-white hover:text-purple-600">
+        <a href="https://www.linkedin.com/in/millyanne-wanjala-5365306b/" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">
           <FaLinkedin size={30} />
         </a>
-        <a href="https://www.twitter.com/millyanne254" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-white hover:text-purple-600">
+        <a href="https://www.twitter.com/millyanne254" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">
           <FaTwitter size={30} />
         </a>
-        <a href="https://www.upwork.com/freelancers/~018f1d860f073c0488" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-white hover:text-purple-600">
+        <a href="https://www.upwork.com/freelancers/~018f1d860f073c0488" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">
           <FaBriefcase size={30} />
         </a>
-        <a href="mailto:nmillyanne20@gmail.com" className="text-gray-700 dark:text-white hover:text-purple-600">
+        <a href="mailto:nmillyanne20@gmail.com" className="text-gray-700 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">
           <FaEnvelope size={30} />
         </a>
-        <a href="https://github.com/millyanne93" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-white hover:text-purple-600">
+        <a href="https://github.com/millyanne93" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">
           <FaGithub size={30} />
         </a>
       </div>

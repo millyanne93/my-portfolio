@@ -68,7 +68,7 @@ const Home = () => {
                 href="https://www.linkedin.com/in/millyanne-wanjala-5365306b/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-800 dark:text-white hover:text-purple-600 transition"
+                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition"
               >
                 <FaLinkedin size={30} />
               </a>
@@ -76,7 +76,7 @@ const Home = () => {
                 href="https://www.twitter.com/millyanne254"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-800 dark:text-white hover:text-purple-600 transition"
+                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition"
               >
                 <FaTwitter size={30} />
               </a>
@@ -84,13 +84,13 @@ const Home = () => {
                 href="https://www.upwork.com/freelancers/~018f1d860f073c0488"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-800 dark:text-white hover:text-purple-600 transition"
+                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition"
               >
                 <FaBriefcase size={30} />
               </a>
               <a
                 href="mailto:nmillyanne20@gmail.com"
-                className="text-gray-800 dark:text-white hover:text-purple-600 transition"
+                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition"
               >
                 <FaEnvelope size={30} />
               </a>
@@ -98,7 +98,7 @@ const Home = () => {
                 href="https://github.com/millyanne93"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-800 dark:text-white hover:text-purple-600 transition"
+                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition"
               >
                 <FaGithub size={30} />
               </a>
