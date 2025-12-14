@@ -192,7 +192,7 @@ const Projects = () => {
                   {/* Back Side with Enhanced Design */}
                   <div className="flip-card-back bg-gray-50 dark:bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-between relative">
                     <div>
-                      <h3 className="text-xl font-semibold text-white text-center mb-2">{project.title}</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white text-center mb-2">{project.title}</h3>
                       <p className="text-gray-400 text-center mb-4 text-sm leading-relaxed">{project.description}</p>
                     </div>
 
