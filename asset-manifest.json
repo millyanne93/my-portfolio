@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.96db638f.css",
-    "main.js": "./static/js/main.9846a495.js",
+    "main.js": "./static/js/main.452498f3.js",
     "static/js/453.acca0757.chunk.js": "./static/js/453.acca0757.chunk.js",
     "static/media/hopeful-destiny.png": "./static/media/hopeful-destiny.8c7fd934ae103bc1b65c.png",
     "static/media/planit.png": "./static/media/planit.546b063deb13bdfb9c63.png",
@@ -21,11 +21,11 @@
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
     "main.96db638f.css.map": "./static/css/main.96db638f.css.map",
-    "main.9846a495.js.map": "./static/js/main.9846a495.js.map",
+    "main.452498f3.js.map": "./static/js/main.452498f3.js.map",
     "453.acca0757.chunk.js.map": "./static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.96db638f.css",
-    "static/js/main.9846a495.js"
+    "static/js/main.452498f3.js"
   ]
 }
