@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Code, Database, PenTool, ServerCog } from "lucide-react"; // Icons for services
 import { FaLinkedin, FaTwitter, FaBriefcase, FaEnvelope, FaGithub } from "react-icons/fa"; // Social media icons
 import profilePhoto from "../assets/images/profile-photo.jpg";
+import { Smartphone } from "lucide-react";
 
 const Home = () => {
   const phrases = [
-    "Crafting Digital Experiences",
-    "Building Web Solutions",
-    "Developing Powerful Apps",
-    "Automating DevOps Workflows",
+    "Crafting Scalable Web & Mobile Apps",
+    "Building Android Apps with Kotlin",
+    "Developing Modern Mobile Solutions",
+    "Automating Cloud & DevOps Workflows",
   ];
   const [text, setText] = useState("");
   const [phraseIndex, setPhraseIndex] = useState(0);
@@ -57,9 +58,8 @@ const Home = () => {
               <span className="border-r-2 border-purple-500 animate-blink">&nbsp;</span>
             </h1>
             <p className="text-xl text-gray-800 dark:text-gray-100 leading-relaxed">
-              Hello there, I'm Millyanne, a Full-Stack Developer creating seamless web applications.
-              Based in Kenya, I combine creativity with technology to build innovative solutions
-              that help businesses thrive in the digital landscape.
+              Hello there, I'm Millyanne, an <strong>Android & Full-Stack Developer</strong> building modern
+        mobile applications with Kotlin and MVVM, alongside scalable web and cloud solutions.
             </p>
 
             {/* Social Media Links */}
@@ -136,6 +136,18 @@ const Home = () => {
               description="I create stunning and responsive web applications using modern frameworks."
               features={["Custom Website Design", "Responsive Layouts", "Modern Frameworks"]}
             />
+            <ServiceCard
+              icon={Smartphone}
+              title="Android Development"
+              description="I build modern Android applications using Kotlin and clean architecture principles."
+              features={[
+                "Kotlin & Android SDK",
+                "MVVM Architecture",
+                "Room Database",
+                "Material Design 3",
+              ]}
+            />
+
 
             {/* Backend Services */}
             <ServiceCard

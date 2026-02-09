@@ -65,12 +65,10 @@ const About = () => {
               <FaUser className="mr-2 text-purple-700" /> About Me
             </h3>
             <p className="text-gray-700 dark:text-white">
-              I'm a results-driven Full-Stack Developer with a strong foundation in software engineering
-              and a background in business development. I specialize in building <strong>scalable web applications</strong>,
-              optimizing <strong>DevOps workflows</strong>, and leveraging <strong>AI-powered solutions</strong>. My expertise 
-              spans from <strong>cloud infrastructure automation</strong> with AWS, Terraform, and Kubernetes to 
-              <strong>container orchestration</strong> and <strong>CI/CD pipeline management</strong>. My ability to merge
-              technical expertise with <strong>strategic problem-solving</strong> allows me to deliver high-quality digital products.
+             I'm a results-driven <strong>Android & Full-Stack Developer</strong> with a strong foundation in
+             software engineering and a background in business development. I specialize in building
+             <strong>modern Android applications using Kotlin and MVVM</strong>, alongside scalable web
+             applications and cloud-native systems. 
             </p>
           </div>
 
@@ -116,6 +114,16 @@ const About = () => {
                   <SkillBar skill="Python" percentage={80} color="#fdd835" />
                   <SkillBar skill="Django & Flask" percentage={80} color="#092E20" />
                   <SkillBar skill="MongoDB & MySQL" percentage={80} color="#4DB33D" />
+                </div>
+                {/* Mobile Development */}
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-green-500 mb-3">Mobile Development (Android)</h4>
+                  <SkillBar skill="Kotlin" percentage={80} color="#7F52FF" />
+                  <SkillBar skill="Android SDK" percentage={75} color="#3DDC84" />
+                  <SkillBar skill="MVVM Architecture" percentage={80} color="#4CAF50" />
+                  <SkillBar skill="Room (SQLite)" percentage={75} color="#4285F4" />
+                  <SkillBar skill="Coroutines & Async" percentage={70} color="#FF9800" />
+                  <SkillBar skill="Material Design 3" percentage={70} color="#9C27B0" />
                 </div>
 
                 {/* DevOps & Cloud */}
@@ -166,8 +174,8 @@ const About = () => {
             <div className="border-l-4 border-purple-500 pl-4 space-y-4">
               <div>
                 <h4 className="text-gray-700 dark:text-white font-semibold">2024 - Present</h4>
-                <p className="text-gray-400">Full-Stack Developer & DevOps Engineer</p>
-                <p className="text-gray-500 text-sm">Cloud infrastructure, Kubernetes, CI/CD automation</p>
+                <p className="text-gray-400">Full-Stack Developer, & DevOps Engineer</p>
+                <p className="text-gray-500 text-sm">Android development alongside web and cloud systems</p>
               </div>
               <div>
                 <h4 className="text-gray-700 dark:text-white font-semibold">2023 - 2024</h4>

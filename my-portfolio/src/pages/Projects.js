@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt, FaGlobe, FaAws, FaDocker } from "react-icons/fa";
 import { SiMongodb, SiFlask, SiTailwindcss, SiJavascript, SiBootstrap, SiTerraform, SiKubernetes, SiHelm, SiAmazoneks } from "react-icons/si";
 import { DiLinux } from "react-icons/di";
+import { FaAndroid } from "react-icons/fa";
+import { SiKotlin, SiSqlite } from "react-icons/si";
 import trackrScreenshot from "../assets/images/trackr.png";
 import eduAdaptScreenshot from "../assets/images/eduadapt.png";
 import teleThriveScreenshot from "../assets/images/telethrive.png";
@@ -18,6 +20,11 @@ const techIcons = {
   Flask: <SiFlask className="text-black text-2xl" />,
   HTML: <FaHtml5 className="text-orange-500 text-2xl" />,
   CSS: <FaCss3Alt className="text-blue-500 text-2xl" />,
+  Android: <FaAndroid className="text-green-500 text-2xl" />,
+  Kotlin: <SiKotlin className="text-purple-500 text-2xl" />,
+  Room: <SiSqlite className="text-blue-500 text-2xl" />,
+  Coroutines: <span className="text-gray-400 text-xs px-2 py-1 bg-gray-800 rounded">Coroutines</span>,
+  MVVM: <span className="text-gray-400 text-xs px-2 py-1 bg-gray-800 rounded">MVVM</span>,
   JavaScript: <SiJavascript className="text-yellow-500 text-2xl" />,
   "Tailwind CSS": <SiTailwindcss className="text-teal-500 text-2xl" />,
   Bootstrap: <SiBootstrap className="text-purple-600 text-2xl" />,
@@ -36,6 +43,14 @@ const techIcons = {
 // Project data
 const projectData = [
   {
+    title: "TaskMaster",
+    description: "A modern Android to-do app built with Kotlin, following MVVM architecture, using Room for local persistence and Coroutines for async operations.",
+    techStack: ["Android", "Kotlin", "MVVM", "Room", "Coroutines"],
+    githubLink: "https://github.com/millyanne93/TaskMaster-Android",
+    category: "Mobile Development",
+    featured: true,
+  }, 
+  {
     title: "Trackr",
     description: "A web-based equipment tracking system with QR scanning & real-time tracking.",
     techStack: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
@@ -44,6 +59,13 @@ const projectData = [
     screenshot: trackrScreenshot,
     category: "Full Stack",
     featured: true,
+  },
+  {
+    title: "Monty Bytecode Interpreter",
+    description: "A C-based interpreter for Monty ByteCode files implementing stack and queue operations, arithmetic opcodes, and memory management.",
+    techStack: ["C", "Data Structures", "Linux"],
+    githubLink: "https://github.com/ynot93/monty",
+    category: "Backend",
   },
   {
     title: "Hopeful Destiny CBO",
@@ -131,7 +153,7 @@ const Projects = () => {
 
         {/* Filter Buttons with Hover Effect - Updated categories */}
         <div className="flex flex-wrap justify-center mb-10 space-x-2">
-          {["All", "Web Development", "Backend", "Full Stack", "DevOps & Cloud"].map((category) => (
+          {["All", "Web Development", "Mobile Development", "Backend", "Full Stack", "DevOps & Cloud"].map((category) => (
             <button
               key={category}
               onClick={() => setFilter(category)}
