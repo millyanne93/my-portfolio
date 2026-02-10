@@ -37,81 +37,80 @@ const Home = () => {
 
   return (
     <div className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white min-h-screen">
-      {/* Hero Section with Initial Avatar */}
+      {/* Hero Section with MW Avatar */}
       <section id="home" className="relative flex items-center justify-center min-h-screen px-6">
-        <div className="relative z-10 w-full max-w-4xl text-center">
-          
-          {/* Initial Avatar - OPTION 2 */}
-          <div className="mb-10">
-            <div className="inline-flex items-center justify-center w-40 h-40 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full text-white text-6xl font-bold shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:shadow-purple-500/50">
-              MW
+        <div className="relative z-10 w-full max-w-6xl flex flex-col md:flex-row items-center">
+          {/* MW Avatar (Replaces Photo) */}
+          <div className="md:w-1/3 flex justify-center md:justify-start mb-8 md:mb-0">
+            <div className="rounded-full w-64 h-64 flex items-center justify-center shadow-2xl border-4 border-purple-500 transform transition-all hover:scale-105 duration-300 bg-gradient-to-br from-purple-500 to-indigo-600">
+              <span className="text-7xl font-bold text-white">MW</span>
             </div>
           </div>
-          
+
           {/* Hero Text */}
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-purple-700 mb-6">
+          <div className="md:w-2/3 text-center md:text-left">
+            <h1 className="text-5xl font-bold text-purple-700 mb-4">
               {text}
               <span className="border-r-2 border-purple-500 animate-blink">&nbsp;</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-800 dark:text-gray-100 leading-relaxed max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-800 dark:text-gray-100 leading-relaxed">
               Hello there, I'm Millyanne Wanjala, an <strong>Android & Full-Stack Developer</strong> building modern
               mobile applications with Kotlin and MVVM, alongside scalable web and cloud solutions.
             </p>
 
             {/* Social Media Links */}
-            <div className="mt-8 flex justify-center space-x-8">
+            <div className="mt-6 flex justify-center md:justify-start space-x-6">
               <a
                 href="https://www.linkedin.com/in/millyanne-wanjala-5365306b/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition transform hover:scale-110"
+                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition"
               >
-                <FaLinkedin size={32} />
+                <FaLinkedin size={30} />
               </a>
               <a
                 href="https://www.twitter.com/millyanne254"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition transform hover:scale-110"
+                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition"
               >
-                <FaTwitter size={32} />
+                <FaTwitter size={30} />
               </a>
               <a
                 href="https://www.upwork.com/freelancers/~018f1d860f073c0488"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition transform hover:scale-110"
+                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition"
               >
-                <FaBriefcase size={32} />
+                <FaBriefcase size={30} />
               </a>
               <a
                 href="mailto:nmillyanne20@gmail.com"
-                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition transform hover:scale-110"
+                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition"
               >
-                <FaEnvelope size={32} />
+                <FaEnvelope size={30} />
               </a>
               <a
                 href="https://github.com/millyanne93"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition transform hover:scale-110"
+                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition"
               >
-                <FaGithub size={32} />
+                <FaGithub size={30} />
               </a>
             </div>
 
             {/* Call-to-Action Buttons */}
-            <div className="mt-10 flex flex-wrap justify-center gap-6">
+            <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
               <a
                 href="#projects"
-                className="inline-block px-10 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-full transition-all shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 text-lg font-semibold"
+                className="inline-block px-8 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-full transition-all shadow-lg hover:shadow-purple-500/50"
               >
                 Explore My Work
               </a>
               <a
                 href="#contact"
-                className="inline-block px-10 py-4 border-2 border-purple-500 text-purple-500 rounded-full transition-all hover:bg-purple-500 hover:text-white transform hover:scale-105 text-lg font-semibold"
+                className="inline-block px-8 py-3 border-2 border-purple-500 text-purple-500 rounded-full transition-all hover:bg-purple-500 hover:text-white"
               >
                 Let's Talk
               </a>
