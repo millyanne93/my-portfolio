@@ -436,15 +436,15 @@ const About = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
                     <h4 className="font-bold text-gray-900 dark:text-white">AWS Cloud Practitioner</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Expected: April 2025</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">April 2025</p>
                   </div>
                   <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
                     <h4 className="font-bold text-gray-900 dark:text-white">Kubernetes Administrator (CKA)</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Planned: 2025</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">2026</p>
                   </div>
                   <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
                     <h4 className="font-bold text-gray-900 dark:text-white">Terraform Associate</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Planned: 2025</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">2026</p>
                   </div>
                   <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
                     <h4 className="font-bold text-gray-900 dark:text-white">Project Management Fundamentals</h4>

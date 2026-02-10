@@ -1,110 +1,92 @@
-import React, { useState } from "react";
-import { FaLinkedin, FaTwitter, FaBriefcase, FaEnvelope, FaGithub } from "react-icons/fa";
-
-const FloatingLabelInput = ({ id, label, type = "text", value, onChange, required }) => {
-  const [isFocused, setIsFocused] = useState(false);
-  const [hasValue, setHasValue] = useState(value !== "");
-
-  return (
-    <div className="relative mb-4">
-      <input
-        id={id}
-        type={type}
-        value={value}
-        onChange={(e) => {
-          setHasValue(e.target.value !== "");
-          onChange(e);
-        }}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(value !== "")}
-        className="w-full pt-5 pb-2 px-3 border border-gray-300 dark:border-gray-600 rounded-lg peer bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500"
-        required={required}
-      />
-      <label
-        htmlFor={id}
-        className={`absolute left-3 transition-all duration-200 ${
-          isFocused || hasValue ? "text-sm text-purple-500 top-1" : "text-base text-gray-400 top-3"
-        }`}
-      >
-        {label}
-      </label>
-    </div>
-  );
-};
+import React from "react";
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaEnvelope,
+  FaGithub,
+} from "react-icons/fa";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState("");
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setError("");
-
-    // Simulate sending delay
-    setTimeout(() => {
-      if (formData.name && formData.email.includes("@") && formData.message.length > 5) {
-        alert("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setError("Please fill in all fields correctly.");
-      }
-      setIsSubmitting(false);
-    }, 2000);
-  };
+  const contactLinks = [
+    {
+      icon: <FaLinkedin className="text-4xl mb-3" />,
+      label: "LinkedIn",
+      description: "Professional profile & experience",
+      href: "https://www.linkedin.com/in/millyanne-wanjala-5365306b/",
+      external: true,
+    },
+    {
+      icon: <FaEnvelope className="text-4xl mb-3" />,
+      label: "Email",
+      description: "nmillyanne20@gmail.com",
+      href: "mailto:nmillyanne20@gmail.com?subject=Hello%20Millyanne",
+      external: false,
+    },
+    {
+      icon: <FaGithub className="text-4xl mb-3" />,
+      label: "GitHub",
+      description: "Code, projects & contributions",
+      href: "https://github.com/millyanne93",
+      external: true,
+    },
+    {
+      icon: <FaTwitter className="text-4xl mb-3" />,
+      label: "Twitter",
+      description: "@millyanne254",
+      href: "https://www.twitter.com/millyanne254",
+      external: true,
+    },
+  ];
 
   return (
-    <section id="contact" className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-800 px-6">
-      <h2 className="text-3xl font-bold text-purple-700 dark:text-purple-700 mb-6">Let's Connect</h2>
+    <section
+      id="contact"
+      className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-800 px-6 py-20"
+    >
+      <h2 className="text-3xl font-bold text-purple-700 mb-4">
+        Let’s Connect
+      </h2>
 
-      {/* Contact Form */}
-      <form onSubmit={handleSubmit} className="w-full max-w-lg p-8 bg-gray-100 dark:bg-gray-900 rounded-lg shadow-lg">
-        <FloatingLabelInput id="name" label="Name" value={formData.name} onChange={handleChange} required />
-        <FloatingLabelInput id="email" label="Email" type="email" value={formData.email} onChange={handleChange} required />
-        <FloatingLabelInput id="message" label="Message" type="text" value={formData.message} onChange={handleChange} required />
+      <p className="text-gray-600 dark:text-gray-400 mb-10 text-center max-w-xl">
+        I’m open to Android development roles, full-stack opportunities, and
+        technical collaborations. Feel free to reach out through any of the
+        platforms below.
+      </p>
 
-        {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+      {/* Contact Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl">
+        {contactLinks.map((link, index) => (
+          <a
+            key={index}
+            href={link.href}
+            target={link.external ? "_blank" : undefined}
+            rel={link.external ? "noopener noreferrer" : undefined}
+            className="flex flex-col items-center p-6 bg-gray-100 dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center"
+          >
+            <div className="text-purple-600">{link.icon}</div>
 
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className={`w-full py-3 mt-4 rounded-lg text-white font-semibold transition-all duration-300 ${
-            isSubmitting ? "bg-gray-500 cursor-not-allowed" : "bg-purple-600 hover:bg-purple-700"
-          }`}
-        >
-          {isSubmitting ? "Sending..." : "Send Message"}
-        </button>
-      </form>
+            <h3 className="font-semibold text-gray-900 dark:text-white">
+              {link.label}
+            </h3>
 
-      {/* Social Media Icons */}
-      <div className="mt-8 flex space-x-6">
-        <a href="https://www.linkedin.com/in/millyanne-wanjala-5365306b/" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">
-          <FaLinkedin size={30} />
-        </a>
-        <a href="https://www.twitter.com/millyanne254" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">
-          <FaTwitter size={30} />
-        </a>
-        <a href="https://www.upwork.com/freelancers/~018f1d860f073c0488" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">
-          <FaBriefcase size={30} />
-        </a>
-        <a href="mailto:nmillyanne20@gmail.com" className="text-gray-700 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">
-          <FaEnvelope size={30} />
-        </a>
-        <a href="https://github.com/millyanne93" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">
-          <FaGithub size={30} />
-        </a>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 break-all">
+              {link.description}
+            </p>
+          </a>
+        ))}
       </div>
 
-      {/* Availability & Response Time */}
+      {/* Availability */}
       <div className="mt-12 text-center">
-        <h3 className="text-2xl font-semibold text-gray-700 dark:text-white mb-2">Availability & Response Time</h3>
-        <p className="text-gray-400">Monday - Friday: 9 AM - 6 PM (GMT+3)</p>
-        <p className="text-gray-400">Typical response time: Within 24 hours</p>
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+          Availability
+        </h3>
+        <p className="text-gray-500 dark:text-gray-400">
+          Monday – Friday · 9 AM – 6 PM (GMT+3)
+        </p>
+        <p className="text-gray-500 dark:text-gray-400">
+          Typical response time: within 24 hours
+        </p>
       </div>
     </section>
   );
