@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt, FaGlobe, FaAws, FaDocker, FaAndroid, FaCode } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt, FaGlobe, FaAws, FaDocker, FaAndroid, FaCode, FaGoogle } from "react-icons/fa";
 import { SiMongodb, SiFlask, SiTailwindcss, SiJavascript, SiBootstrap, SiTerraform, SiKubernetes, SiHelm, SiAmazoneks, SiKotlin, SiSqlite, SiC } from "react-icons/si";
 import { DiLinux } from "react-icons/di";
 
+const GeminiIcon = () => (
+  <svg
+    className="text-purple-500 w-6 h-6"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    {/* Gemini-like star/hexagon shape */}
+    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+  </svg>
+);
 // Icons for tech stack - Updated to use purple theme
 const techIcons = {
   React: <FaReact className="text-purple-500 text-2xl" />,
@@ -13,6 +23,7 @@ const techIcons = {
   HTML: <FaHtml5 className="text-purple-500 text-2xl" />,
   CSS: <FaCss3Alt className="text-purple-500 text-2xl" />,
   C: <SiC className="text-purple-600 text-2xl" />,
+  "Gemini AI": <FaGoogle className="text-purple-500 text-2xl" />,
   Android: <FaAndroid className="text-purple-500 text-2xl" />,
   Kotlin: <SiKotlin className="text-purple-600 text-2xl" />,
   Room: <SiSqlite className="text-purple-500 text-2xl" />,
@@ -47,9 +58,15 @@ const categoryStyles = {
     bgColor: "bg-purple-50 dark:bg-purple-900/20",
     badgeColor: "bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300"
   },
+  "Systems Programming": {
+    gradient: "from-purple-600 to-purple-900",
+    icon: <SiC className="text-white" />,
+    bgColor: "bg-purple-50 dark:bg-purple-900/30",
+    badgeColor: "bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300"
+  },
   "Backend": {
     gradient: "from-purple-500 to-purple-800",
-    icon: <SiC className="text-white" />,
+    icon: <SiFlask className="text-white" />,
     bgColor: "bg-purple-50 dark:bg-purple-900/30",
     badgeColor: "bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300"
   },
@@ -91,7 +108,7 @@ const projectData = [
     description: "A C-based interpreter for Monty ByteCode files implementing stack and queue operations, arithmetic opcodes, and memory management.",
     techStack: ["C", "Data Structures", "Linux"],
     githubLink: "https://github.com/ynot93/monty",
-    category: "Backend",
+    category: "Systems Programming",
     featured: false,
   },
   {
@@ -113,8 +130,8 @@ const projectData = [
   },
   {
     title: "EduAdapt",
-    description: "An adaptive learning platform using AI for personalized content.",
-    techStack: ["Node.js", "React", "Tailwind CSS"],
+    description: "An adaptive learning platform using AI for personalized content recommendations powered by Gemini AI",
+    techStack: ["Node.js", "React", "Tailwind CSS", "Gemini AI"],
     githubLink: "https://github.com/millyanne93/eduadapt",
     category: "Full Stack",
     featured: false,
@@ -178,7 +195,7 @@ const Projects = () => {
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center mb-10 gap-3">
-          {["All", "Mobile Development", "Web Development", "Backend", "Full Stack", "DevOps & Cloud"].map((category) => (
+          {["All", "Mobile Development", "Web Development", "Backend", "Full Stack", "Systems Programming", "DevOps & Cloud"].map((category) => (
             <button
               key={category}
               onClick={() => setFilter(category)}

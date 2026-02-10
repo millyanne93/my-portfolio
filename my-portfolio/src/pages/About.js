@@ -13,7 +13,9 @@ import {
   SiKotlin,
   SiKubernetes,
   SiPython,
-  SiJavascript
+  SiJavascript,
+  SiCplusplus, // ADD THIS for C++
+  SiC 
 } from "react-icons/si";
 
 // Animated Skill Circle Component with Purple Color Scheme
@@ -255,7 +257,7 @@ const About = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                    I'm a results-driven <strong className="text-purple-600">Android & Full-Stack Developer</strong> with a passion for building modern, scalable applications. My expertise spans mobile development with <strong className="text-purple-600">Kotlin and MVVM architecture</strong>, alongside robust web applications and cloud-native systems.
+                    I'm a results-driven <strong className="text-purple-600">Android & Full-Stack Developer</strong> with a passion for building modern, scalable applications. My expertise spans expertise spans <strong className="text-purple-600">systems programming with C/C++</strong>, mobile development with <strong className="text-purple-600">Kotlin and MVVM architecture</strong>, alongside robust web applications and cloud-native systems.
                   </p>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                     With experience in <strong className="text-purple-600">DevOps automation, Infrastructure as Code (IaC)</strong>, and <strong className="text-purple-600">container orchestration</strong>, I bridge the gap between development and operations, ensuring seamless deployment and scalability.
@@ -316,6 +318,19 @@ const About = () => {
                   <SkillCircle skill="Room DB" percentage={75} icon={FaDatabase} />
                   <SkillCircle skill="Coroutines" percentage={70} icon={FaCode} />
                   <SkillCircle skill="Material 3" percentage={70} icon={FaAndroid} />
+                </div>
+              </div>
+              {/* NEW: Systems Programming Section */}
+    	      <div className="mb-10">
+                <h4 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-6 flex items-center gap-2">
+                  <FaCode /> Systems Programming
+                </h4>
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                  <SkillCircle skill="C" percentage={85} icon={SiC} />
+                  <SkillCircle skill="C++" percentage={75} icon={SiCplusplus} />
+                  <SkillCircle skill="Data Structures" percentage={80} icon={FaCode} />
+                  <SkillCircle skill="Algorithms" percentage={80} icon={FaCode} />
+                  <SkillCircle skill="Linux" percentage={70} icon={FaCode} />
                 </div>
               </div>
 

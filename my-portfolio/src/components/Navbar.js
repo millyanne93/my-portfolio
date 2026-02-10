@@ -76,7 +76,7 @@ const Navbar = () => {
                 Projects
               </button>
               <button
-                onClick={() => scrollToSection('experience')}
+                onClick={() => scrollToSection('contact')}
                 className="block w-full text-left px-4 py-2 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600"
               >
                 
