@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Code, Database, PenTool, ServerCog, Smartphone } from "lucide-react"; // Icons for services
+import { Code, Database, PenTool, ServerCog, Smartphone, Network } from "lucide-react"; // Icons for services
 import { FaLinkedin, FaTwitter, FaBriefcase, FaEnvelope, FaGithub } from "react-icons/fa"; // Social media icons
 
 const Home = () => {
   const phrases = [
-    "Full-Stack Mobile Developer",
+    "Software Engineer | Cloud & Mobile",
     "Building Apps That Matter",
     "Crafting Seamless User Experiences",
     "Turning Vision Into Reality",
@@ -55,7 +55,7 @@ const Home = () => {
             </h1>
             <p className="text-xl text-gray-800 dark:text-gray-100 leading-relaxed">
               Hello there, I'm Millyanne Wanjala, an <strong>Android & Full-Stack Developer</strong> building modern
-              mobile applications with Kotlin and MVVM, alongside scalable web and cloud solutions.
+              mobile applications with Kotlin and MVVM, alongside scalable web and cloud-native solutions with a strong foundation in network infrastructure.
             </p>
 
             {/* Social Media Links */}
@@ -146,20 +146,20 @@ const Home = () => {
               features={["Custom Website Design", "Responsive Layouts", "Modern Frameworks"]}
             />
 
-            {/* Backend Services */}
+            {/* Cloud & Networking */}
             <ServiceCard
-              icon={Database}
-              title="Backend Services"
-              description="I build robust and scalable backend architectures for seamless data management."
-              features={["API Development", "Database Optimization", "Server Management"]}
+              icon={Network}
+              title="Cloud & Networking"
+              description="I design and deploy secure cloud infrastructure with robust network architectures."
+              features={["AWS VPC & Networking", "Security Groups & NACLs", "Load Balancing", "Network Monitoring"]}
             />
 
-            {/* DevOps Services */}
+            {/* DevOps & Automation */}
             <ServiceCard
               icon={ServerCog}
-              title="DevOps Services"
-              description="Automating software deployment and optimizing infrastructure for reliability."
-              features={["CI/CD Pipelines", "Infrastructure as Code (IaC)", "Monitoring & Logging"]}
+              title="DevOps & Automation"
+              description="Automating infrastructure deployment and optimizing CI/CD pipelines for reliability."
+              features={["CI/CD Pipelines", "Infrastructure as Code", "Kubernetes", "Monitoring & Logging"]}
             />
           </div>
         </div>

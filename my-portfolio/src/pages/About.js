@@ -7,15 +7,17 @@ import {
   FaAndroid,
   FaReact,
   FaAws,
-  FaDatabase
+  FaDatabase,
+  FaNetworkWired
 } from "react-icons/fa";
 import {
   SiKotlin,
   SiKubernetes,
   SiPython,
   SiJavascript,
-  SiCplusplus, // ADD THIS for C++
-  SiC 
+  SiCplusplus,
+  SiC,
+  SiTerraform
 } from "react-icons/si";
 
 // Animated Skill Circle Component with Purple Color Scheme
@@ -99,7 +101,7 @@ const TimelineItem = ({ year, title, company, description, responsibilities, ico
         <h4 className="text-lg font-bold text-gray-900 dark:text-white mt-1">{title}</h4>
         <p className="text-sm text-purple-700 dark:text-purple-300 mb-2">{company}</p>
         <p className="text-sm text-gray-700 dark:text-gray-300">{description}</p>
-        
+
         {/* Key Responsibilities */}
         {responsibilities && responsibilities.length > 0 && (
           <div className="mt-3">
@@ -118,7 +120,7 @@ const TimelineItem = ({ year, title, company, description, responsibilities, ico
   </div>
 );
 
-// ✅ UPDATED experienceTimeline (YOUR REVISED VERSION)
+// Updated experienceTimeline with networking emphasis
 const experienceTimeline = [
   {
     year: "2025",
@@ -138,11 +140,13 @@ const experienceTimeline = [
     title: "Android Developer & Full-Stack Engineer",
     company: "Independent Projects",
     description:
-      "Building modern mobile and web applications using Android/Kotlin, React, and cloud technologies with focus on MVVM architecture and DevOps practices.",
+      "Building modern mobile and web applications using Android/Kotlin, React, and cloud technologies with focus on MVVM architecture, cloud networking, and DevOps practices.",
     responsibilities: [
       "Built TaskMaster — an Android task management app using Kotlin, MVVM, Room, and Coroutines → GitHub: github.com/millyanne93/TaskMaster-Android",
       "Developed Trackr — a role-based equipment tracking system with full CRUD operations → GitHub: github.com/millyanne93/Trackr",
-      "Designed PlanIt — a cloud-native task management system using Kubernetes, Terraform (IaC), and AWS EKS"
+      "Designed PlanIt — a cloud-native task management system using Kubernetes, Terraform (IaC), and AWS EKS with multi-AZ VPC architecture",
+      "Implemented AWS networking infrastructure including VPC design, subnet configuration, security groups, NACLs, and load balancers for production workloads",
+      "Configured network monitoring and troubleshooting using CloudWatch and VPC Flow Logs"
     ],
     icon: FaAndroid
   },
@@ -155,7 +159,8 @@ const experienceTimeline = [
     responsibilities: [
       "Developed EduAdapt, an adaptive learning platform using React and Node.js",
       "Built Tele-Thrive, a virtual therapy platform using Flask and JavaScript",
-      "Implemented a Monty ByteCode Interpreter in C, focusing on memory management and algorithmic logic"
+      "Implemented a Monty ByteCode Interpreter in C, focusing on memory management and algorithmic logic",
+      "Gained foundational knowledge in network protocols (TCP/IP, HTTP/HTTPS, DNS) through systems programming projects"
     ],
     icon: FaCode
   },
@@ -187,7 +192,6 @@ const experienceTimeline = [
   }
 ];
 
-// ✅ CLEANED About COMPONENT STATE
 const About = () => {
   const [activeTab, setActiveTab] = useState("overview");
   const [showTimeline, setShowTimeline] = useState(false);
@@ -214,10 +218,10 @@ const About = () => {
           </p>
         </div>
 
-        {/* Quick Stats - All Purple */}
+        {/* Quick Stats - Updated with AWS Services */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           <StatsCard number="8+" label="Projects Completed" icon={FaCode} />
-          <StatsCard number="5+" label="Technologies" icon={FaBriefcase} />
+          <StatsCard number="10+" label="AWS Services" icon={FaAws} />
           <StatsCard number="2+" label="Years Coding" icon={FaGraduationCap} />
           <StatsCard number="100%" label="Commitment" icon={FaAndroid} />
         </div>
@@ -248,22 +252,22 @@ const About = () => {
         {/* Tab Content */}
         <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 min-h-96">
 
-          {/* Overview Tab */}
+          {/* Overview Tab - Enhanced with Networking */}
           {activeTab === "overview" && (
             <div className="animate-fadeIn">
               <h3 className="text-2xl font-bold text-purple-700 mb-6">
-                Android & Full-Stack Developer
+                Android & Full-Stack Developer | Cloud & Network Infrastructure
               </h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                    I'm a results-driven <strong className="text-purple-600">Android & Full-Stack Developer</strong> with a passion for building modern, scalable applications. My expertise spans expertise spans <strong className="text-purple-600">systems programming with C/C++</strong>, mobile development with <strong className="text-purple-600">Kotlin and MVVM architecture</strong>, alongside robust web applications and cloud-native systems.
+                    I'm a results-driven <strong className="text-purple-600">Android & Full-Stack Developer</strong> with a passion for building modern, scalable applications. My expertise spans <strong className="text-purple-600">systems programming with C/C++</strong>, mobile development with <strong className="text-purple-600">Kotlin and MVVM architecture</strong>, alongside robust web applications and cloud-native systems.
                   </p>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                    With experience in <strong className="text-purple-600">DevOps automation, Infrastructure as Code (IaC)</strong>, and <strong className="text-purple-600">container orchestration</strong>, I bridge the gap between development and operations, ensuring seamless deployment and scalability.
+                    With hands-on experience in <strong className="text-purple-600">AWS cloud networking, VPC architecture, and security group configuration</strong>, I understand how to design and deploy secure, scalable infrastructure. My knowledge extends to <strong className="text-purple-600">network protocols (TCP/IP, DNS, HTTP/HTTPS)</strong>, load balancing, and network monitoring.
                   </p>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    I thrive in collaborative environments, continuously innovate through code, and am committed to delivering high-quality digital products that solve real-world problems.
+                    I bridge the gap between development and operations through <strong className="text-purple-600">DevOps automation, Infrastructure as Code (IaC)</strong>, and <strong className="text-purple-600">container orchestration</strong>, ensuring seamless deployment and scalability. I thrive in collaborative environments and am committed to delivering high-quality digital products that solve real-world problems.
                   </p>
                 </div>
                 <div className="space-y-4">
@@ -287,10 +291,19 @@ const About = () => {
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center flex-shrink-0">
+                      <FaNetworkWired className="text-purple-600 dark:text-purple-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 dark:text-white">Cloud & Networking</h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Designing secure VPC architectures, implementing network security, and optimizing cloud infrastructure</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center flex-shrink-0">
                       <FaAws className="text-purple-600 dark:text-purple-400" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 dark:text-white">Cloud & DevOps</h4>
+                      <h4 className="font-bold text-gray-900 dark:text-white">DevOps & IaC</h4>
                       <p className="text-sm text-gray-600 dark:text-gray-400">Automating infrastructure with AWS, Kubernetes, and Terraform</p>
                     </div>
                   </div>
@@ -299,7 +312,7 @@ const About = () => {
             </div>
           )}
 
-          {/* Skills Tab */}
+          {/* Skills Tab - Enhanced with Networking Section */}
           {activeTab === "skills" && (
             <div className="animate-fadeIn">
               <h3 className="text-2xl font-bold text-purple-700 mb-8 text-center">
@@ -320,8 +333,9 @@ const About = () => {
                   <SkillCircle skill="Material 3" percentage={70} icon={FaAndroid} />
                 </div>
               </div>
-              {/* NEW: Systems Programming Section */}
-    	      <div className="mb-10">
+
+              {/* Systems Programming Section */}
+              <div className="mb-10">
                 <h4 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-6 flex items-center gap-2">
                   <FaCode /> Systems Programming
                 </h4>
@@ -348,23 +362,38 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Cloud & DevOps */}
+              {/* NEW: Cloud Networking & Infrastructure */}
+              <div className="mb-10">
+                <h4 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-6 flex items-center gap-2">
+                  <FaNetworkWired /> Cloud Networking & Infrastructure
+                </h4>
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                  <SkillCircle skill="AWS VPC" percentage={75} icon={FaAws} />
+                  <SkillCircle skill="Security Groups" percentage={80} icon={FaNetworkWired} />
+                  <SkillCircle skill="Load Balancers" percentage={75} icon={FaNetworkWired} />
+                  <SkillCircle skill="TCP/IP" percentage={70} icon={FaNetworkWired} />
+                  <SkillCircle skill="DNS" percentage={70} icon={FaNetworkWired} />
+                  <SkillCircle skill="CloudWatch" percentage={75} icon={FaAws} />
+                </div>
+              </div>
+
+              {/* DevOps & Automation */}
               <div>
                 <h4 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-6 flex items-center gap-2">
-                  <FaAws /> Cloud & DevOps
+                  <FaAws /> DevOps & Automation
                 </h4>
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
                   <SkillCircle skill="AWS" percentage={75} icon={FaAws} />
                   <SkillCircle skill="Kubernetes" percentage={85} icon={SiKubernetes} />
                   <SkillCircle skill="Docker" percentage={85} icon={FaCode} />
-                  <SkillCircle skill="Terraform" percentage={80} icon={FaCode} />
+                  <SkillCircle skill="Terraform" percentage={80} icon={SiTerraform} />
                   <SkillCircle skill="CI/CD" percentage={85} icon={FaCode} />
                 </div>
               </div>
             </div>
           )}
 
-          {/* ✅ UPDATED Experience Tab with GitHub CTA */}
+          {/* Experience Tab with Updated Timeline */}
           {activeTab === "experience" && (
             <div className="animate-fadeIn">
               <h3 className="text-2xl font-bold text-purple-700 mb-8">
@@ -429,6 +458,9 @@ const About = () => {
                       <h4 className="text-lg font-bold text-gray-900 dark:text-white">Software Engineering Program</h4>
                       <p className="text-purple-600 dark:text-purple-400 font-semibold">ALX Africa</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">2023 - 2024</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                        <strong>Relevant Coursework:</strong> Network protocols (TCP/IP, HTTP/HTTPS), Systems programming (C/C++), Algorithm design, Backend development
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -437,14 +469,17 @@ const About = () => {
                   <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
                     <h4 className="font-bold text-gray-900 dark:text-white">AWS Cloud Practitioner</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">April 2025</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">VPC, Networking, Security Groups, Load Balancing</p>
                   </div>
                   <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
                     <h4 className="font-bold text-gray-900 dark:text-white">Kubernetes Administrator (CKA)</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">2026</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">2026 (In Progress)</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Container networking, Service mesh</p>
                   </div>
                   <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
                     <h4 className="font-bold text-gray-900 dark:text-white">Terraform Associate</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">2026</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">2026 (Planned)</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Infrastructure as Code, Network automation</p>
                   </div>
                   <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
                     <h4 className="font-bold text-gray-900 dark:text-white">Project Management Fundamentals</h4>
