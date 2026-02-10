@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars, FaSun, FaMoon } from 'react-icons/fa'; // Added sun/moon icons
-import logo from '../assets/images/mylogo.png';
+import { FaBars, FaSun, FaMoon } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -19,10 +18,10 @@ const Navbar = () => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 768); // Mobile breakpoint
     };
-    
+
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
-    
+
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
@@ -59,28 +58,28 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-200 dark:bg-gray-800 p-4 shadow-md sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Logo Section */}
+        {/* Logo Section - REMOVED IMAGE */}
         <div className="flex items-center">
-          <img src={logo} alt="Logo" className="h-10 w-10 mr-2" />
-          <span className="text-xl text-purple-800 dark:text-purple-300 font-bold">My Portfolio</span>
+          {/* REMOVED: <img src={logo} alt="Logo" className="h-10 w-10 mr-2" /> */}
+          <span className="text-2xl text-purple-700 dark:text-purple-400 font-bold">Millyanne Wanjala</span>
         </div>
 
         {/* Desktop Navigation (Hidden on Mobile) */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors duration-300"
+              className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors duration-300 text-lg"
             >
               {item.label}
             </button>
           ))}
-          
+
           {/* Dark Mode Toggle for Desktop */}
           <button
             onClick={toggleDarkMode}
-            className="ml-4 p-2 rounded-full bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-400 dark:hover:bg-gray-600 transition-colors duration-300"
+            className="ml-6 p-3 rounded-full bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-400 dark:hover:bg-gray-600 transition-colors duration-300"
             aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
           >
             {isDarkMode ? <FaSun /> : <FaMoon />}
@@ -91,7 +90,7 @@ const Navbar = () => {
         <div className="md:hidden relative">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="p-2 rounded-md bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-400 dark:hover:bg-gray-600 transition-colors duration-300"
+            className="p-3 rounded-md bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-400 dark:hover:bg-gray-600 transition-colors duration-300"
             aria-label="Menu"
           >
             <FaBars className="text-xl" />
@@ -109,7 +108,7 @@ const Navbar = () => {
                   {item.label}
                 </button>
               ))}
-              
+
               {/* Dark Mode Toggle in Dropdown */}
               <button
                 onClick={toggleDarkMode}
