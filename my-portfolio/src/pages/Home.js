@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Code, Database, PenTool, ServerCog } from "lucide-react"; // Icons for services
+import { Code, Database, PenTool, ServerCog, Smartphone } from "lucide-react"; // Icons for services
 import { FaLinkedin, FaTwitter, FaBriefcase, FaEnvelope, FaGithub } from "react-icons/fa"; // Social media icons
 import profilePhoto from "../assets/images/profile-photo.jpg";
-import { Smartphone } from "lucide-react";
 
 const Home = () => {
   const phrases = [
@@ -59,7 +58,7 @@ const Home = () => {
             </h1>
             <p className="text-xl text-gray-800 dark:text-gray-100 leading-relaxed">
               Hello there, I'm Millyanne, an <strong>Android & Full-Stack Developer</strong> building modern
-        mobile applications with Kotlin and MVVM, alongside scalable web and cloud solutions.
+              mobile applications with Kotlin and MVVM, alongside scalable web and cloud solutions.
             </p>
 
             {/* Social Media Links */}
@@ -126,16 +125,10 @@ const Home = () => {
       {/* Services Section */}
       <section className="py-20 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-purple-700 mb-12">My Services</h2>
+          <h2 className="text-4xl font-bold text-purple-700 mb-12">Skills & Technologies</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Web Development */}
-            <ServiceCard
-              icon={Code}
-              title="Web Development"
-              description="I create stunning and responsive web applications using modern frameworks."
-              features={["Custom Website Design", "Responsive Layouts", "Modern Frameworks"]}
-            />
+            {/* Android Development */}
             <ServiceCard
               icon={Smartphone}
               title="Android Development"
@@ -148,6 +141,13 @@ const Home = () => {
               ]}
             />
 
+            {/* Web Development */}
+            <ServiceCard
+              icon={Code}
+              title="Web Development"
+              description="I create stunning and responsive web applications using modern frameworks."
+              features={["Custom Website Design", "Responsive Layouts", "Modern Frameworks"]}
+            />
 
             {/* Backend Services */}
             <ServiceCard
@@ -155,14 +155,6 @@ const Home = () => {
               title="Backend Services"
               description="I build robust and scalable backend architectures for seamless data management."
               features={["API Development", "Database Optimization", "Server Management"]}
-            />
-
-            {/* UI/UX Design */}
-            <ServiceCard
-              icon={PenTool}
-              title="UI/UX Design"
-              description="I craft intuitive, user-focused interfaces for great user experiences."
-              features={["User Research", "Wireframing & Prototyping", "User Testing & Iteration"]}
             />
 
             {/* DevOps Services */}
@@ -179,7 +171,7 @@ const Home = () => {
   );
 };
 
-// Service Card Component with Icons
+// Service Card Component with Icons (Request Quote button removed)
 const ServiceCard = ({ icon: Icon, title, description, features }) => {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg p-8 transition-transform transform hover:-translate-y-3 hover:shadow-purple-500/50">
@@ -188,24 +180,16 @@ const ServiceCard = ({ icon: Icon, title, description, features }) => {
       </div>
       <h3 className="text-2xl font-semibold text-purple-900 dark:text-white mb-4">{title}</h3>
       <p className="text-gray-700 dark:text-gray-400 mb-6">{description}</p>
-      <ul className="space-y-3 text-gray-400">
+      <ul className="space-y-3 text-gray-600 dark:text-gray-400">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
-            <span className="w-5 h-5 mr-2 bg-purple-500 text-white flex items-center justify-center rounded-full">
+            <span className="w-5 h-5 mr-2 bg-purple-500 text-white flex items-center justify-center rounded-full text-xs">
               ✓
             </span>
             {feature}
           </li>
         ))}
       </ul>
-      <div className="mt-6">
-        <a
-          href="#contact"
-          className="block text-center py-3 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition"
-        >
-          Request a Quote
-        </a>
-      </div>
     </div>
   );
 };

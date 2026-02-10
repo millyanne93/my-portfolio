@@ -79,12 +79,7 @@ const Navbar = () => {
                 onClick={() => scrollToSection('experience')}
                 className="block w-full text-left px-4 py-2 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600"
               >
-                Experience
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="block w-full text-left px-4 py-2 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600"
-              >
+                
                 Contact
               </button>
               <button
