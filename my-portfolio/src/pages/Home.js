@@ -54,8 +54,8 @@ const Home = () => {
               <span className="border-r-2 border-purple-500 animate-blink">&nbsp;</span>
             </h1>
             <p className="text-xl text-gray-800 dark:text-gray-100 leading-relaxed">
-              Hello there, I'm Millyanne Wanjala, an <strong>Android & Full-Stack Developer</strong> building modern
-              mobile applications with Kotlin and MVVM, alongside scalable web and cloud-native solutions with a strong foundation in network infrastructure.
+              Hello there, I'm Millyanne Wanjala, a Software Engineer building modern,
+               scalable web, mobile and cloud-native solutions with a strong foundation in network infrastructure.
             </p>
 
             {/* Social Media Links */}

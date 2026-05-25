@@ -123,30 +123,31 @@ const TimelineItem = ({ year, title, company, description, responsibilities, ico
 // Updated experienceTimeline with networking emphasis
 const experienceTimeline = [
   {
-    year: "2025",
-    title: "Contract Web Developer",
+    year: "2025- Present",
+    title: "Sole Technical Lead & Full-Stack Developer",
     company: "Hopeful Destiny CBO",
     description:
       "Contracted to design and develop a modern, responsive website for a community-based organization focused on youth empowerment and community development.",
     responsibilities: [
-      "Designed and delivered a fully responsive React website using Tailwind CSS, improving mobile usability and accessibility",
-      "Built reusable UI components and subtle animations to enhance user engagement",
-      "Collaborated with stakeholders to translate organizational needs into scalable frontend features"
+      "Architected & delivered a fully responsive React website with Tailwind CSS, establishing the organization's digital foundation",
+      "Act as sole point of contact for translating stakeholder needs into technical requirements and implementation",
+      "Manage all ongoing technical operations including deployment monitoring, performance optimization, and security updates",
+      "Manage content lifecycle — publish organizational announcements, event updates, and new initiatives as they go live",
+      "Scale infrastructure and optimize codebase as the organization's needs grow"
     ],
     icon: FaReact
   },
   {
     year: "2024 - Present",
-    title: "Android Developer & Full-Stack Engineer",
+    title: "Full-Stack Engineer",
     company: "Independent Projects",
     description:
-      "Building modern mobile and web applications using Android/Kotlin, React, and cloud technologies with focus on MVVM architecture, cloud networking, and DevOps practices.",
+      "Building end-to-end mobile and web solutions with Android/Kotlin, React, and cloud-native infrastructure.",
     responsibilities: [
-      "Built TaskMaster — an Android task management app using Kotlin, MVVM, Room, and Coroutines → GitHub: github.com/millyanne93/TaskMaster-Android",
-      "Developed Trackr — a role-based equipment tracking system with full CRUD operations → GitHub: github.com/millyanne93/Trackr",
-      "Designed PlanIt — a cloud-native task management system using Kubernetes, Terraform (IaC), and AWS EKS with multi-AZ VPC architecture",
-      "Implemented AWS networking infrastructure including VPC design, subnet configuration, security groups, NACLs, and load balancers for production workloads",
-      "Configured network monitoring and troubleshooting using CloudWatch and VPC Flow Logs"
+      "Develop full-stack web applications with role-based access and full CRUD capabilities",
+      "Design and deploy cloud-native systems on AWS EKS using Kubernetes and Terraform (IaC)",
+      "Build secure, scalable AWS networking (VPC, subnets, security groups, NACLs, load balancers)",
+      "Implement monitoring and troubleshooting with CloudWatch and VPC Flow Logs"
     ],
     icon: FaAndroid
   },
@@ -218,14 +219,6 @@ const About = () => {
           </p>
         </div>
 
-        {/* Quick Stats - Updated with AWS Services */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-          <StatsCard number="8+" label="Projects Completed" icon={FaCode} />
-          <StatsCard number="10+" label="AWS Services" icon={FaAws} />
-          <StatsCard number="2+" label="Years Coding" icon={FaGraduationCap} />
-          <StatsCard number="100%" label="Commitment" icon={FaAndroid} />
-        </div>
-
         {/* Tab Navigation - Purple Theme */}
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           {[
@@ -256,12 +249,12 @@ const About = () => {
           {activeTab === "overview" && (
             <div className="animate-fadeIn">
               <h3 className="text-2xl font-bold text-purple-700 mb-6">
-                Android & Full-Stack Developer | Cloud & Network Infrastructure
+                Software Engineer | Cloud & Network Infrastructure | AI
               </h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                    I'm a results-driven <strong className="text-purple-600">Android & Full-Stack Developer</strong> with a passion for building modern, scalable applications. My expertise spans <strong className="text-purple-600">systems programming with C/C++</strong>, mobile development with <strong className="text-purple-600">Kotlin and MVVM architecture</strong>, alongside robust web applications and cloud-native systems.
+                    I'm a results-driven <strong className="text-purple-600">Software Engineer</strong> with a passion for building modern, scalable applications. My expertise spans <strong className="text-purple-600">systems programming, mobile development</strong>, alongside robust web applications and cloud-native systems.
                   </p>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                     With hands-on experience in <strong className="text-purple-600">AWS cloud networking, VPC architecture, and security group configuration</strong>, I understand how to design and deploy secure, scalable infrastructure. My knowledge extends to <strong className="text-purple-600">network protocols (TCP/IP, DNS, HTTP/HTTPS)</strong>, load balancing, and network monitoring.
