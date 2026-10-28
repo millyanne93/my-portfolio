@@ -1,117 +1,66 @@
-import React, { useState, useEffect } from "react";
-import { Code, Database, PenTool, ServerCog, Smartphone, Network } from "lucide-react"; // Icons for services
-import { FaLinkedin, FaTwitter, FaBriefcase, FaEnvelope, FaGithub } from "react-icons/fa"; // Social media icons
+import React from "react";
+import { Code, Network } from "lucide-react";
+import { FaLinkedin, FaTwitter, FaBriefcase, FaEnvelope, FaGithub } from "react-icons/fa";
 
 const Home = () => {
-  const phrases = [
-    "Software Engineer | Cloud & Mobile",
-    "Building Apps That Matter",
-    "Crafting Seamless User Experiences",
-    "Turning Vision Into Reality",
-  ];
-  const [text, setText] = useState("");
-  const [phraseIndex, setPhraseIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  useEffect(() => {
-    const currentPhrase = phrases[phraseIndex];
-    let typeSpeed = isDeleting ? 50 : 100;
-
-    if (!isDeleting && charIndex === currentPhrase.length) {
-      typeSpeed = 1500;
-      setIsDeleting(true);
-    } else if (isDeleting && charIndex === 0) {
-      setIsDeleting(false);
-      setPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-      typeSpeed = 500;
-    }
-
-    const timer = setTimeout(() => {
-      setText(currentPhrase.substring(0, charIndex + (isDeleting ? -1 : 1)));
-      setCharIndex((prevCharIndex) => prevCharIndex + (isDeleting ? -1 : 1));
-    }, typeSpeed);
-
-    return () => clearTimeout(timer);
-  }, [charIndex, isDeleting, phraseIndex, phrases]);
-
   return (
-    <div className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white min-h-screen">
-      {/* Hero Section with MW Avatar */}
+    <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen">
+      {/* Hero Section */}
       <section id="home" className="relative flex items-center justify-center min-h-screen px-6">
         <div className="relative z-10 w-full max-w-6xl flex flex-col md:flex-row items-center">
-          {/* MW Avatar (Replaces Photo) */}
+          {/* MW Monogram */}
           <div className="md:w-1/3 flex justify-center md:justify-start mb-8 md:mb-0">
-            <div className="rounded-full w-64 h-64 flex items-center justify-center shadow-2xl border-4 border-purple-500 transform transition-all hover:scale-105 duration-300 bg-gradient-to-br from-purple-500 to-indigo-600">
-              <span className="text-7xl font-bold text-white">MW</span>
+            <div className="rounded-full w-56 h-56 flex items-center justify-center border-4 border-purple-600 bg-purple-600">
+              <span className="text-6xl font-bold text-white">MW</span>
             </div>
           </div>
 
           {/* Hero Text */}
           <div className="md:w-2/3 text-center md:text-left">
-            <h1 className="text-5xl font-bold text-purple-700 mb-4">
-              {text}
-              <span className="border-r-2 border-purple-500 animate-blink">&nbsp;</span>
+            <h1 className="text-4xl md:text-5xl font-bold text-purple-700 dark:text-purple-400 mb-4">
+              I build dependable backend systems that survive real-world failures.
             </h1>
-            <p className="text-xl text-gray-800 dark:text-gray-100 leading-relaxed">
-              Hello there, I'm Millyanne Wanjala, a Software Engineer building modern,
-               scalable web, mobile and cloud-native solutions with a strong foundation in network infrastructure.
+            <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+              I build and deploy reliable APIs with authentication, AI integration, and cloud infrastructure.
             </p>
 
-            {/* Social Media Links */}
+            {/* Social Links */}
             <div className="mt-6 flex justify-center md:justify-start space-x-6">
-              <a
-                href="https://www.linkedin.com/in/millyanne-wanjala-5365306b/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition"
-              >
-                <FaLinkedin size={30} />
+              <a href="https://www.linkedin.com/in/millyanne-wanjala-5365306b/" target="_blank" rel="noopener noreferrer"
+                 className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                 aria-label="LinkedIn">
+                <FaLinkedin size={26} />
               </a>
-              <a
-                href="https://www.twitter.com/millyanne254"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition"
-              >
-                <FaTwitter size={30} />
+              <a href="https://www.twitter.com/millyanne254" target="_blank" rel="noopener noreferrer"
+                 className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                 aria-label="Twitter">
+                <FaTwitter size={26} />
               </a>
-              <a
-                href="https://www.upwork.com/freelancers/~018f1d860f073c0488"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition"
-              >
-                <FaBriefcase size={30} />
+              <a href="https://www.upwork.com/freelancers/~018f1d860f073c0488" target="_blank" rel="noopener noreferrer"
+                 className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                 aria-label="Upwork">
+                <FaBriefcase size={26} />
               </a>
-              <a
-                href="mailto:nmillyanne20@gmail.com"
-                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition"
-              >
-                <FaEnvelope size={30} />
+              <a href="mailto:nmillyanne20@gmail.com"
+                 className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                 aria-label="Email">
+                <FaEnvelope size={26} />
               </a>
-              <a
-                href="https://github.com/millyanne93"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition"
-              >
-                <FaGithub size={30} />
+              <a href="https://github.com/millyanne93" target="_blank" rel="noopener noreferrer"
+                 className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                 aria-label="GitHub">
+                <FaGithub size={26} />
               </a>
             </div>
 
-            {/* Call-to-Action Buttons */}
+            {/* CTA */}
             <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
-              <a
-                href="#projects"
-                className="inline-block px-8 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-full transition-all shadow-lg hover:shadow-purple-500/50"
-              >
-                Explore My Work
+              <a href="#projects"
+                 className="inline-block px-8 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors">
+                View My Work
               </a>
-              <a
-                href="#contact"
-                className="inline-block px-8 py-3 border-2 border-purple-500 text-purple-500 rounded-full transition-all hover:bg-purple-500 hover:text-white"
-              >
+              <a href="#contact"
+                 className="inline-block px-8 py-3 border border-purple-600 text-purple-600 dark:text-purple-400 rounded-lg font-medium hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors">
                 Let's Talk
               </a>
             </div>
@@ -119,47 +68,25 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-gray-100 dark:bg-gray-900">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-purple-700 mb-12">Skills & Technologies</h2>
+      {/* Focus Areas */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-purple-700 dark:text-purple-400 mb-12 text-center">
+            What I Build
+          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Android Development */}
-            <ServiceCard
-              icon={Smartphone}
-              title="Android Development"
-              description="I build modern Android applications using Kotlin and clean architecture principles."
-              features={[
-                "Kotlin & Android SDK",
-                "MVVM Architecture",
-                "Room Database",
-                "Material Design 3",
-              ]}
-            />
-
-            {/* Web Development */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceCard
               icon={Code}
-              title="Web Development"
-              description="I create stunning and responsive web applications using modern frameworks."
-              features={["Custom Website Design", "Responsive Layouts", "Modern Frameworks"]}
+              title="API & Backend Services"
+              description="I build secure, dependable APIs that handle authentication and return useful errors instead of crashes."
+              features={["Express & TypeScript", "PostgreSQL & Supabase", "Authentication & authorization", "API documentation & testing"]}
             />
-
-            {/* Cloud & Networking */}
             <ServiceCard
               icon={Network}
-              title="Cloud & Networking"
-              description="I design and deploy secure cloud infrastructure with robust network architectures."
-              features={["AWS VPC & Networking", "Security Groups & NACLs", "Load Balancing", "Network Monitoring"]}
-            />
-
-            {/* DevOps & Automation */}
-            <ServiceCard
-              icon={ServerCog}
-              title="DevOps & Automation"
-              description="Automating infrastructure deployment and optimizing CI/CD pipelines for reliability."
-              features={["CI/CD Pipelines", "Infrastructure as Code", "Kubernetes", "Monitoring & Logging"]}
+              title="Cloud Infrastructure & DevOps"
+              description="I design and deploy infrastructure on AWS using Kubernetes and Terraform, with automated CI/CD pipelines and secure networking."
+              features={["AWS & Kubernetes", "Terraform (IaC)", "Docker & Helm", "CI/CD pipelines"]}
             />
           </div>
         </div>
@@ -168,21 +95,18 @@ const Home = () => {
   );
 };
 
-// Service Card Component with Icons (Request Quote button removed)
 const ServiceCard = ({ icon: Icon, title, description, features }) => {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg p-8 transition-transform transform hover:-translate-y-3 hover:shadow-purple-500/50">
-      <div className="flex justify-center items-center w-16 h-16 bg-purple-700 rounded-full mb-6">
-        <Icon className="w-10 h-10 text-white" />
+    <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 p-8">
+      <div className="flex justify-center items-center w-14 h-14 bg-purple-100 dark:bg-purple-900/40 rounded-full mb-6">
+        <Icon className="w-7 h-7 text-purple-600 dark:text-purple-400" />
       </div>
-      <h3 className="text-2xl font-semibold text-purple-900 dark:text-white mb-4">{title}</h3>
-      <p className="text-gray-700 dark:text-gray-400 mb-6">{description}</p>
-      <ul className="space-y-3 text-gray-600 dark:text-gray-400">
+      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-400 mb-6">{description}</p>
+      <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
         {features.map((feature, index) => (
-          <li key={index} className="flex items-center">
-            <span className="w-5 h-5 mr-2 bg-purple-500 text-white flex items-center justify-center rounded-full text-xs">
-              ✓
-            </span>
+          <li key={index} className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
             {feature}
           </li>
         ))}
