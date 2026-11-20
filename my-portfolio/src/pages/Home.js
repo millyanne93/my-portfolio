@@ -4,20 +4,20 @@ import { FaLinkedin, FaTwitter, FaBriefcase, FaEnvelope, FaGithub } from "react-
 
 const Home = () => {
   return (
-    <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen">
+    <div className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white min-h-screen">
       {/* Hero Section */}
       <section id="home" className="relative flex items-center justify-center min-h-screen px-6">
         <div className="relative z-10 w-full max-w-6xl flex flex-col md:flex-row items-center">
           {/* MW Monogram */}
           <div className="md:w-1/3 flex justify-center md:justify-start mb-8 md:mb-0">
-            <div className="rounded-full w-56 h-56 flex items-center justify-center border-4 border-purple-600 bg-purple-600">
+            <div className="rounded-full w-56 h-56 flex items-center justify-center border-4 border-[#38b000] bg-[#70e000]">
               <span className="text-6xl font-bold text-white">MW</span>
             </div>
           </div>
 
           {/* Hero Text */}
           <div className="md:w-2/3 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold text-purple-700 dark:text-purple-400 mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-green-700 dark:text-green-400 mb-4">
               I build dependable backend systems that survive real-world failures.
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -27,27 +27,27 @@ const Home = () => {
             {/* Social Links */}
             <div className="mt-6 flex justify-center md:justify-start space-x-6">
               <a href="https://www.linkedin.com/in/millyanne-wanjala-5365306b/" target="_blank" rel="noopener noreferrer"
-                 className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                 className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
                  aria-label="LinkedIn">
                 <FaLinkedin size={26} />
               </a>
               <a href="https://www.twitter.com/millyanne254" target="_blank" rel="noopener noreferrer"
-                 className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                 className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
                  aria-label="Twitter">
                 <FaTwitter size={26} />
               </a>
               <a href="https://www.upwork.com/freelancers/~018f1d860f073c0488" target="_blank" rel="noopener noreferrer"
-                 className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                 className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
                  aria-label="Upwork">
                 <FaBriefcase size={26} />
               </a>
               <a href="mailto:nmillyanne20@gmail.com"
-                 className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                 className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
                  aria-label="Email">
                 <FaEnvelope size={26} />
               </a>
               <a href="https://github.com/millyanne93" target="_blank" rel="noopener noreferrer"
-                 className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                 className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
                  aria-label="GitHub">
                 <FaGithub size={26} />
               </a>
@@ -56,11 +56,11 @@ const Home = () => {
             {/* CTA */}
             <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
               <a href="#projects"
-                 className="inline-block px-8 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors">
+                 className="inline-block px-8 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors">
                 View My Work
               </a>
               <a href="#contact"
-                 className="inline-block px-8 py-3 border border-purple-600 text-purple-600 dark:text-purple-400 rounded-lg font-medium hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors">
+                 className="inline-block px-8 py-3 border border-green-600 text-green-600 dark:text-green-400 rounded-lg font-medium hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors">
                 Let's Talk
               </a>
             </div>
@@ -71,7 +71,7 @@ const Home = () => {
       {/* Focus Areas */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-purple-700 dark:text-purple-400 mb-12 text-center">
+          <h2 className="text-3xl font-bold text-green-700 dark:text-green-400 mb-12 text-center">
             What I Build
           </h2>
 
@@ -98,15 +98,15 @@ const Home = () => {
 const ServiceCard = ({ icon: Icon, title, description, features }) => {
   return (
     <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 p-8">
-      <div className="flex justify-center items-center w-14 h-14 bg-purple-100 dark:bg-purple-900/40 rounded-full mb-6">
-        <Icon className="w-7 h-7 text-purple-600 dark:text-purple-400" />
+      <div className="flex justify-center items-center w-14 h-14 bg-green-100 dark:bg-green-900/40 rounded-full mb-6">
+        <Icon className="w-7 h-7 text-green-600 dark:text-green-400" />
       </div>
       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{title}</h3>
       <p className="text-gray-600 dark:text-gray-400 mb-6">{description}</p>
       <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+            <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
             {feature}
           </li>
         ))}

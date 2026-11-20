@@ -61,7 +61,7 @@ const Navbar = () => {
         {/* Logo Section - REMOVED IMAGE */}
         <div className="flex items-center">
           {/* REMOVED: <img src={logo} alt="Logo" className="h-10 w-10 mr-2" /> */}
-          <span className="text-2xl text-purple-700 dark:text-purple-400 font-bold">Millyanne Wanjala</span>
+          <span className="text-2xl text-green-700 dark:text-green-400 font-bold">Millyanne Wanjala</span>
         </div>
 
         {/* Desktop Navigation (Hidden on Mobile) */}
@@ -70,7 +70,7 @@ const Navbar = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors duration-300 text-lg"
+              className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 font-medium transition-colors duration-300 text-lg"
             >
               {item.label}
             </button>

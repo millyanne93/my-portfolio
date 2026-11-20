@@ -51,7 +51,7 @@ const projectData = [
 
 const ProjectSection = ({ label, children }) => (
 	  <div className="mb-4">
-	    <h4 className="text-xs font-semibold text-purple-700 dark:text-purple-400 uppercase tracking-wide mb-1">
+	    <h4 className="text-xs font-semibold text-green-700 dark:text-green-400 uppercase tracking-wide mb-1">
 	      {label}
 	    </h4>
 	    <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{children}</p>
@@ -60,14 +60,14 @@ const ProjectSection = ({ label, children }) => (
 
 const ProjectCard = ({ project, featured }) => (
 	  <div
-	    className={`bg-white dark:bg-gray-800 rounded-xl border ${
-		          featured ? "border-purple-300 dark:border-purple-700" : "border-gray-200 dark:border-gray-700"
+	    className={`bg-white dark:bg-gray-900 rounded-xl border ${
+		          featured ? "border-green-300 dark:border-green-700" : "border-gray-200 dark:border-gray-700"
 		        } p-8`}
 	  >
 	    <div className="flex items-start justify-between mb-1">
 	      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{project.title}</h3>
 	      {featured && (
-		              <span className="text-xs font-semibold px-2 py-1 rounded-full bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300">
+		              <span className="text-xs font-semibold px-2 py-1 rounded-full bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300">
 		                Featured
 		              </span>
 		            )}
@@ -97,7 +97,7 @@ const ProjectCard = ({ project, featured }) => (
 	        href={project.githubLink}
 	        target="_blank"
 	        rel="noopener noreferrer"
-	        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-purple-600 dark:hover:bg-purple-600 transition-colors text-sm font-medium"
+	        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-green-600 dark:hover:bg-green-600 transition-colors text-sm font-medium"
 	      >
 	        <FaGithub />
 	        Code
@@ -107,7 +107,7 @@ const ProjectCard = ({ project, featured }) => (
 		                href={project.liveSiteLink}
 		                target="_blank"
 		                rel="noopener noreferrer"
-		                className="flex-1 flex items-center justify-center gap-2 px-4 py-2 border border-purple-600 text-purple-600 dark:text-purple-400 rounded-lg hover:bg-purple-600 hover:text-white transition-colors text-sm font-medium"
+		                className="flex-1 flex items-center justify-center gap-2 px-4 py-2 border border-green-600 text-green-600 dark:text-green-400 rounded-lg hover:bg-green-600 hover:text-white transition-colors text-sm font-medium"
 		              >
 		                <FaExternalLinkAlt className="text-xs" />
 		                Live Demo
@@ -119,11 +119,11 @@ const ProjectCard = ({ project, featured }) => (
 
 const Projects = () => {
 	  return (
-		      <section id="projects" className="min-h-screen py-16 bg-gray-50 dark:bg-gray-900">
+		      <section id="projects" className="min-h-screen py-16 bg-gray-50 dark:bg-gray-800">
 		        <div className="max-w-4xl mx-auto px-6">
 		          {/* Header */}
 		          <div className="text-center mb-12">
-		            <h2 className="text-4xl font-bold text-purple-700 dark:text-purple-400 mb-3">
+		            <h2 className="text-4xl font-bold text-green-700 dark:text-green-400 mb-3">
 		              Projects
 		            </h2>
 		            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">

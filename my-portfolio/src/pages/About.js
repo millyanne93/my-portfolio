@@ -12,14 +12,14 @@ import {
 
 const SkillBadgeGroup = ({ title, skills }) => (
   <div className="mb-8">
-    <h4 className="text-sm font-semibold text-purple-700 dark:text-purple-400 mb-3 uppercase tracking-wide">
+    <h4 className="text-sm font-semibold text-green-700 dark:text-green-400 mb-3 uppercase tracking-wide">
       {title}
     </h4>
     <div className="flex flex-wrap gap-2">
       {skills.map((skill) => (
         <span
           key={skill}
-          className="text-sm px-3 py-1.5 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full border border-purple-200 dark:border-purple-800"
+          className="text-sm px-3 py-1.5 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full border border-green-200 dark:border-green-800"
         >
           {skill}
         </span>
@@ -29,13 +29,13 @@ const SkillBadgeGroup = ({ title, skills }) => (
 );
 
 const StatsCard = ({ number, label, icon: Icon }) => (
-  <div className="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-700 border-l-4 border-l-purple-500">
+  <div className="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-700 border-l-4 border-l-green-500">
     <div className="flex items-center justify-between">
       <div>
-        <p className="text-3xl font-bold text-purple-700 dark:text-purple-400">{number}</p>
+        <p className="text-3xl font-bold text-green-700 dark:text-green-400">{number}</p>
         <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{label}</p>
       </div>
-      <Icon className="text-4xl opacity-20 text-purple-500" />
+      <Icon className="text-4xl opacity-20 text-green-500" />
     </div>
   </div>
 );
@@ -43,21 +43,21 @@ const StatsCard = ({ number, label, icon: Icon }) => (
 const TimelineItem = ({ year, title, company, description, responsibilities, icon: Icon }) => (
   <div className="flex gap-4">
     <div className="flex flex-col items-center">
-      <div className="w-10 h-10 rounded-full flex items-center justify-center bg-purple-600 flex-shrink-0">
+      <div className="w-10 h-10 rounded-full flex items-center justify-center bg-green-600 flex-shrink-0">
         <Icon className="text-white text-lg" />
       </div>
-      <div className="w-0.5 h-full bg-purple-200 dark:bg-purple-800"></div>
+      <div className="w-0.5 h-full bg-green-200 dark:bg-green-800"></div>
     </div>
     <div className="pb-8 flex-1">
       <div className="bg-white dark:bg-gray-900 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-        <p className="text-sm font-semibold text-purple-600 dark:text-purple-400">{year}</p>
+        <p className="text-sm font-semibold text-green-600 dark:text-green-400">{year}</p>
         <h4 className="text-lg font-bold text-gray-900 dark:text-white mt-1">{title}</h4>
-        <p className="text-sm text-purple-700 dark:text-purple-300 mb-2">{company}</p>
+        <p className="text-sm text-green-700 dark:text-green-300 mb-2">{company}</p>
         <p className="text-sm text-gray-700 dark:text-gray-300">{description}</p>
 
         {responsibilities && responsibilities.length > 0 && (
           <div className="mt-3">
-            <p className="text-sm font-semibold text-purple-700 dark:text-purple-300 mb-2">Key work:</p>
+            <p className="text-sm font-semibold text-green-700 dark:text-green-300 mb-2">Key work:</p>
             <ul className="list-disc list-inside space-y-1">
               {responsibilities.map((resp, index) => (
                 <li key={index} className="text-sm text-gray-600 dark:text-gray-400">
@@ -161,7 +161,7 @@ const About = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-purple-700 dark:text-purple-400 mb-4 flex items-center justify-center gap-3">
+          <h2 className="text-4xl font-bold text-green-700 dark:text-green-400 mb-4 flex items-center justify-center gap-3">
             <FaUser />
             About Me
           </h2>
@@ -183,11 +183,11 @@ const About = () => {
               onClick={() => setActiveTab(tab.id)}
               className={`px-5 py-2.5 rounded-lg font-medium transition-colors flex items-center gap-2 ${
                 activeTab === tab.id
-                  ? "bg-purple-600 text-white"
-                  : "bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-purple-400"
+                  ? "bg-green-600 text-white"
+                  : "bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-green-400"
               }`}
             >
-              <tab.icon className={activeTab === tab.id ? "text-white" : "text-purple-600"} />
+              <tab.icon className={activeTab === tab.id ? "text-white" : "text-green-600"} />
               {tab.label}
             </button>
           ))}
@@ -197,7 +197,7 @@ const About = () => {
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 min-h-96">
           {activeTab === "overview" && (
             <div>
-              <h3 className="text-2xl font-bold text-purple-700 dark:text-purple-400 mb-6">
+              <h3 className="text-2xl font-bold text-green-700 dark:text-green-400 mb-6">
                 Backend Engineer | Cloud Infrastructure
               </h3>
               <div className="grid md:grid-cols-2 gap-8">
@@ -214,8 +214,8 @@ const About = () => {
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center flex-shrink-0">
-                      <FaDatabase className="text-purple-600 dark:text-purple-400" />
+                    <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/40 flex items-center justify-center flex-shrink-0">
+                      <FaDatabase className="text-green-600 dark:text-green-400" />
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-900 dark:text-white">API & Backend Services</h4>
@@ -223,8 +223,8 @@ const About = () => {
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center flex-shrink-0">
-                      <FaNetworkWired className="text-purple-600 dark:text-purple-400" />
+                    <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/40 flex items-center justify-center flex-shrink-0">
+                      <FaNetworkWired className="text-green-600 dark:text-green-400" />
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-900 dark:text-white">Cloud Infrastructure & DevOps</h4>
@@ -238,7 +238,7 @@ const About = () => {
 
           {activeTab === "skills" && (
             <div>
-              <h3 className="text-2xl font-bold text-purple-700 dark:text-purple-400 mb-8">
+              <h3 className="text-2xl font-bold text-green-700 dark:text-green-400 mb-8">
                 Technical Expertise
               </h3>
               <SkillBadgeGroup
@@ -254,7 +254,7 @@ const About = () => {
 
           {activeTab === "experience" && (
             <div>
-              <h3 className="text-2xl font-bold text-purple-700 dark:text-purple-400 mb-8">
+              <h3 className="text-2xl font-bold text-green-700 dark:text-green-400 mb-8">
                 Professional Experience
               </h3>
               <div className="space-y-4">
@@ -270,7 +270,7 @@ const About = () => {
                   href="https://github.com/millyanne93"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-6 py-3 rounded-lg bg-purple-600 text-white font-medium hover:bg-purple-700 transition-colors"
+                  className="inline-block px-6 py-3 rounded-lg bg-green-600 text-white font-medium hover:bg-green-700 transition-colors"
                 >
                   View My GitHub →
                 </a>
@@ -280,27 +280,27 @@ const About = () => {
 
           {activeTab === "education" && (
             <div>
-              <h3 className="text-2xl font-bold text-purple-700 dark:text-purple-400 mb-8">
+              <h3 className="text-2xl font-bold text-green-700 dark:text-green-400 mb-8">
                 Education & Certifications
               </h3>
               <div className="space-y-6">
-                <div className="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
+                <div className="border-l-4 border-green-500 pl-6 py-4 bg-green-50 dark:bg-green-900/20 rounded-r-lg">
                   <div className="flex items-start gap-3">
-                    <FaGraduationCap className="text-2xl text-purple-600 dark:text-purple-400 mt-1" />
+                    <FaGraduationCap className="text-2xl text-green-600 dark:text-green-400 mt-1" />
                     <div>
                       <h4 className="text-lg font-bold text-gray-900 dark:text-white">Bachelor's in Information Science</h4>
-                      <p className="text-purple-600 dark:text-purple-400 font-semibold">Maasai Mara University</p>
+                      <p className="text-green-600 dark:text-green-400 font-semibold">Maasai Mara University</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">2012 - 2016</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="border-l-4 border-purple-500 pl-6 py-4 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
+                <div className="border-l-4 border-green-500 pl-6 py-4 bg-green-50 dark:bg-green-900/20 rounded-r-lg">
                   <div className="flex items-start gap-3">
-                    <FaCode className="text-2xl text-purple-600 dark:text-purple-400 mt-1" />
+                    <FaCode className="text-2xl text-green-600 dark:text-green-400 mt-1" />
                     <div>
                       <h4 className="text-lg font-bold text-gray-900 dark:text-white">Software Engineering Program</h4>
-                      <p className="text-purple-600 dark:text-purple-400 font-semibold">ALX Africa</p>
+                      <p className="text-green-600 dark:text-green-400 font-semibold">ALX Africa</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">2023 - 2024</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
                         <strong>Relevant coursework:</strong> Network protocols (TCP/IP, HTTP/HTTPS), systems programming (C/C++), algorithm design, backend development
@@ -310,19 +310,19 @@ const About = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
+                  <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 dark:bg-green-900/20 rounded-r-lg">
                     <h4 className="font-bold text-gray-900 dark:text-white">AWS Cloud Practitioner</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">April 2025</p>
                   </div>
-                  <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
+                  <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 dark:bg-green-900/20 rounded-r-lg">
                     <h4 className="font-bold text-gray-900 dark:text-white">Kubernetes Administrator (CKA)</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">2026 (In Progress)</p>
                   </div>
-                  <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
+                  <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 dark:bg-green-900/20 rounded-r-lg">
                     <h4 className="font-bold text-gray-900 dark:text-white">Terraform Associate</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">2026 (Planned)</p>
                   </div>
-                  <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg">
+                  <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 dark:bg-green-900/20 rounded-r-lg">
                     <h4 className="font-bold text-gray-900 dark:text-white">Project Management Fundamentals</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Coursera - 2022</p>
                   </div>

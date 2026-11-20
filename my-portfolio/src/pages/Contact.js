@@ -41,9 +41,9 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 px-6 py-20"
+      className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-800 px-6 py-20"
     >
-      <h2 className="text-3xl font-bold text-purple-700 dark:text-purple-400 mb-4">
+      <h2 className="text-3xl font-bold text-green-700 dark:text-green-400 mb-4">
         Let's Connect
       </h2>
 
@@ -54,7 +54,7 @@ const Contact = () => {
       {/* Primary CTA */}
       <a
         href="mailto:nmillyanne20@gmail.com?subject=Technical%20Interview"
-        className="mb-12 inline-block px-8 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors"
+        className="mb-12 inline-block px-8 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors"
       >
         Email me to schedule a technical interview
       </a>
@@ -67,9 +67,9 @@ const Contact = () => {
             href={link.href}
             target={link.external ? "_blank" : undefined}
             rel={link.external ? "noopener noreferrer" : undefined}
-            className="flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-purple-400 dark:hover:border-purple-500 transition-colors text-center"
+            className="flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-green-400 dark:hover:border-green-500 transition-colors text-center"
           >
-            <div className="text-purple-600 dark:text-purple-400">{link.icon}</div>
+            <div className="text-green-600 dark:text-green-400">{link.icon}</div>
 
             <h3 className="font-semibold text-gray-900 dark:text-white">
               {link.label}
